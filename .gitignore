@@ -1,0 +1,29 @@
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+*.synctex.gz
+*.fdb*
+
+## Sublime files
+*.sublime*
+
+## VSCode files
+.vscode
+*.code*
+
+## PyCharm files
+.idea
+venv
+
+## Excel files
+*.xl*

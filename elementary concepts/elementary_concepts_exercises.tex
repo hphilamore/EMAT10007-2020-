@@ -1,0 +1,394 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header
+\documentclass[11pt]{report}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Class Test: Elementary Concepts}
+\section*{EMAT10007 - Introduction to Computer Programming}
+\section*{Class Test: Elementary Concepts}
+\subsection*{Overview}
+\begin{itemize}
+    \item \textbf{26th October} is the ``Elementary Concepts'' class test. You will be tested on your understanding of the core principles of programming, including the topics covered so far in the labs.
+
+	\item The test will be multiple choice and we will be adding some additional examples on Blackboard early next week for you to practice with before the test.
+
+    \item If you're wondering ``where are the answers to the exercises?'', look to the Python console! The best way to revise for this test is to work through the examples in the Python console, and to modify the examples until you understand what the program is doing.
+\end{itemize}
+
+\section*{Practice exercises}
+
+\subsection*{Variable assignment}
+\begin{enumerate}
+    % What we want to test is different variable types, converting between them, comparing them, assigning values, how they can change values, working with loops, working with conditions, internal data types.  Also make sure you throw in some hard ones as well.
+
+    % ASSIGNMENT
+
+    \item Predict the \textbf{value} of B:
+
+    {\tt A = "10"}\\
+    {\tt B = 5}\\
+    {\tt B = A}\\
+    {\tt A = 1}\\
+    $\Box$ 5 \hspace{3em} $\Box$ 10 \hspace{3em} $\Box$ ``10'' \hspace{3em} $\Box$ 1
+
+    \item Predict the \textbf{value} of A:
+
+    {\tt A = 2}\\
+    {\tt B = 3}\\
+    {\tt A = "B"}\\
+    {\tt B = 1}\\
+    $\Box$ 2 \hspace{3em} $\Box$ 3 \hspace{3em} $\Box$ 1 \hspace{3em} $\Box$ ``B''
+
+    \item Predict the \textbf{value} of C:
+
+    {\tt A = 0}\\
+    {\tt B = "True"}\\
+    {\tt C = B == A}\\
+    $\Box$ True \hspace{3em} $\Box$ False \hspace{3em} $\Box$ 1 \hspace{3em} $\Box$ 0
+
+    \item Predict the \textbf{value} of C:
+
+    {\tt A = 1.0}\\
+    {\tt B = False}\\
+    {\tt C = B = A}\\
+    $\Box$ True \hspace{3em} $\Box$ False \hspace{3em} $\Box$ 1.0 \hspace{3em} $\Box$ 0.0
+
+    \item Predict the \textbf{value} of C:
+
+    {\tt A = True and False}\\
+    {\tt B = False}\\
+    {\tt C = B = A}\\
+    $\Box$ True \hspace{3em} $\Box$ ``True'' \hspace{3em} $\Box$ False \hspace{3em} $\Box$ ``False''
+
+    \item Predict the \textbf{value} of C:
+
+    {\tt A = True and False}\\
+    {\tt B = False and True}\\
+    {\tt C = A and B}\\
+    $\Box$ True \hspace{3em} $\Box$ ``True'' \hspace{3em} $\Box$ False \hspace{3em} $\Box$ ``False''
+
+    \item Predict the \textbf{value} of C:
+
+    {\tt A = 0}\\
+    {\tt B = False}\\
+    {\tt C = A != B}\\
+    $\Box$ True \hspace{3em} $\Box$ 1 \hspace{3em} $\Box$ False \hspace{3em} $\Box$ 0
+
+    \item Predict the \textbf{value} of C:
+
+    {\tt A = 1}\\
+    {\tt B = 0}\\
+    {\tt C = A or B}\\
+    $\Box$ True \hspace{3em} $\Box$ 1 \hspace{3em} $\Box$ False \hspace{3em} $\Box$ 0
+
+    \item Predict the \textbf{value} of B:
+
+    {\tt A = ("Cheese", "Butter")}\\
+    {\tt B = isinstance(A, tuple)}\\
+    $\Box$ {\tt Tuple} \hspace{3em} $\Box$ {\tt False} \hspace{3em} $\Box$ {\tt True}
+
+    \vspace{2em}
+    \hrule
+    \vspace{1em}
+
+\end{enumerate}
+\subsection*{Types}
+\begin{enumerate}
+    % TYPES
+
+    \item Predict the \textbf{type} of A:
+
+    \begin{enumerate}
+        \item {\tt A = "False"}\\
+        $\Box$ String \hspace{3em} $\Box$ Boolean \hspace{3em} $\Box$ Integer\\
+
+        \item {\tt A = 10 + 2.0}\\
+        $\Box$ Complex \hspace{3em} $\Box$ Integer \hspace{3em} $\Box$ Float\\
+
+        \item  {\tt A = 10 / 2}\\
+        $\Box$ Complex \hspace{3em} $\Box$ Integer \hspace{3em} $\Box$ Float\\
+
+        \item {\tt A = 10 * 2.0}\\
+        $\Box$ Complex \hspace{3em} $\Box$ Integer \hspace{3em} $\Box$ Float\\
+    \end{enumerate}
+
+    \item Predict the \textbf{type} of B:
+
+    \begin{enumerate}
+        \item {\tt B = 2 + 2j}\\
+        $\Box$ Complex \hspace{3em} $\Box$ Integer \hspace{3em} $\Box$ String \hspace{3em} \\
+
+        \item {\tt B = "Hello " + "World!"}\\
+        $\Box$ List \hspace{3em} $\Box$ Dictionary \hspace{3em} $\Box$ String \\
+
+        \item {\tt B = 2 + 1 / 2 * 3}\\
+        $\Box$ Complex \hspace{3em} $\Box$ Integer \hspace{3em} $\Box$ Float \\
+
+        \item {\tt B = 3.0 > 2.0}\\
+        $\Box$ Integer \hspace{3em} $\Box$ Boolean \hspace{3em} $\Box$ Float \\
+    \end{enumerate}
+
+    \item Predict the \textbf{type} of C:
+
+    \begin{enumerate}
+        \item {\tt C = 1 + True}\\
+        $\Box$ Float \hspace{3em} $\Box$ Integer \hspace{3em} $\Box$ Boolean \hspace{3em} \\
+
+        \item {\tt C = False + True}\\
+        $\Box$ Boolean \hspace{3em} $\Box$ Integer \hspace{3em} $\Box$ Float \\
+
+        \item {\tt C = 2 * "1"}\\
+        $\Box$ String \hspace{3em} $\Box$ Float \hspace{3em} $\Box$ Integer \\
+
+        \item {\tt C = 3.0 * False}\\
+        $\Box$ Integer \hspace{3em} $\Box$ Boolean \hspace{3em} $\Box$ Float \\
+    \end{enumerate}
+
+    \vspace{2em}
+    \hrule
+    \vspace{1em}
+
+\end{enumerate}
+\subsection*{Strings}
+\begin{enumerate}
+
+    \item Predict the \textbf{value} of C:
+
+    {\tt A = "Hello"}\\
+    {\tt B = "World"}\\
+    {\tt C = A + B}\\
+    $\Box$ {\tt "Hello World"} \hspace{3em} $\Box$ {\tt "HelloWorld"} \hspace{3em} $\Box$ {\tt "Helloworld"}
+
+    \item Predict the \textbf{value} of C:
+
+    {\tt A = "Hello "}\\
+    {\tt B = "World"}\\
+    {\tt C = (A + B).find("W")}\\
+    $\Box$ {\tt 5} \hspace{3em} $\Box$ {\tt 6} \hspace{3em} $\Box$ {\tt 7}
+
+    \item Predict the \textbf{value} of C:
+
+    {\tt A = "Hello"}\\
+    {\tt B = "World"}\\
+    {\tt C = (A + B).find(" ")}\\
+    $\Box$ 5 \hspace{3em} $\Box$ 6 \hspace{3em} $\Box$ -1
+
+    \item Predict the \textbf{value} of B:
+
+    {\tt A = "Hello there"}\\
+    {\tt B = A[2]}\\
+    $\Box$ e \hspace{3em} $\Box$ l \hspace{3em} $\Box$ o
+
+    \item Predict the \textbf{value} of A:
+
+    {\tt A = "hello there"}\\
+    {\tt A = A.title()}\\
+    $\Box$ {\tt "Hello there"} \hspace{3em} $\Box$ {\tt "Hello There"} \hspace{3em} $\Box$ {\tt "hello there"}
+
+    \item Predict the \textbf{value} of A:
+
+    {\tt A = "hello there"}\\
+    {\tt A = A.capitalise()}\\
+    $\Box$ {\tt "Hello there"} \hspace{3em} $\Box$ {\tt "Hello There"} \hspace{3em} $\Box$ {\tt "HELLO THERE"}
+
+    \item Predict the \textbf{value} of A:
+
+    {\tt A = "hello there"}\\
+    {\tt A = A.split()[1]}\\
+    $\Box$ {\tt "hello"} \hspace{3em} $\Box$ {\tt "there"} \hspace{3em} $\Box$ {\tt "hellothere"}
+
+    \item Predict the \textbf{value} of A:
+
+    {\tt A = "hello world"}\\
+    {\tt A.upper()}\\
+    $\Box$ {\tt "Hello World"} \hspace{3em} $\Box$ {\tt "HELLO WORLD"} \hspace{3em} $\Box$ {\tt "hello world"}
+
+    \vspace{2em}
+    \hrule
+    \vspace{1em}
+
+\end{enumerate}
+\subsection*{Lists}
+\begin{enumerate}
+
+    % LISTS
+
+    \item Predict the \textbf{value} of A:
+
+    {\tt A = [3, 4, 5]}\\
+    {\tt A[0] = A[1]}\\
+    $\Box$ {\tt [3, 3, 4]} \hspace{3em} $\Box$ {\tt [4, 4, 5]} \hspace{3em} $\Box$ {\tt [3, 3, 5]}
+
+    \item Predict the \textbf{value} of B:
+
+    {\tt B = [10, 20, 30]}\\
+    {\tt B[-2] = B[1]}\\
+    $\Box$ {\tt [10, 20, 30]} \hspace{3em} $\Box$ {\tt [10, 10, 20]} \hspace{3em} $\Box$ {\tt [20, 20, 30]}
+
+    \item Predict the \textbf{value} of C:
+
+    {\tt C = ["Hello", "world"]}\\
+    {\tt C = "".join(C)}\\
+    $\Box$ {\tt "Helloworld"} \hspace{3em} $\Box$ {\tt ["Helloworld"]} \hspace{3em} $\Box$ {\tt "Hello world"}
+
+    \item Predict the \textbf{value} of D:
+
+    {\tt D = ["Python", "is", "fun!"]}\\
+    {\tt D = " ".join(D)}\\
+    $\Box$ {\tt "Python is fun!"} \hspace{3em} $\Box$ {\tt ["Python is fun!"]} \hspace{3em} $\Box$ {\tt "Pythonisfun"}
+
+    \item Predict the \textbf{value} of E:
+
+    {\tt E = "Python programming"}\\
+    {\tt E = E.split()}\\
+    $\Box$ {\tt ["Python", " ", "programming"]} \hspace{0.5em} $\Box$ {\tt ["Python", "programming"]} \hspace{0.5em} $\Box$ {\tt ["Python programming"]}
+
+    \item Predict the \textbf{value} of F:
+
+    {\tt F = "Hello there!"}\\
+    {\tt F = F.split("!")}\\
+    $\Box$ {\tt ["Hello", " ", "there", "!"]} \hspace{0.5em} $\Box$ {\tt ["Hello there", "!"]} \hspace{0.5em} $\Box$ {\tt ["Hello there", ""]}
+
+    \item Predict the \textbf{value} of G:
+
+    {\tt G = [1,2,3]}\\
+    {\tt G[0] = G[1] + 1}\\
+    $\Box$ {\tt [2,2,3]} \hspace{3em} $\Box$ {\tt [3,2,3]} \hspace{3em} $\Box$ {\tt [1,3,3]}
+
+    \item Predict the \textbf{value} of H:
+
+    {\tt Values = [[[-1,3],[9,0]],[[0,2],[-3,-1]]]}\\
+    {\tt Values.append(6)}\\
+    {\tt H = len(Values)}\\
+    $\Box$ 3 \hspace{0.5em} $\Box$ 4 \hspace{0.5em} $\Box$ 5
+
+    \item Predict the \textbf{value} of I:
+
+    {\tt Values = [1,3,-5,7]}\\
+    {\tt Values.sort()}\\
+    {\tt I = Values[1]}\\
+    $\Box$ 1 \hspace{0.5em} $\Box$ 3 \hspace{0.5em} $\Box$ -5
+
+    \item Predict the \textbf{value} of I:
+
+    {\tt Values = [1,3,-5,7]}\\
+    {\tt Values.sort()}\\
+    {\tt I = Values[1]}\\
+    $\Box$ 1 \hspace{0.5em} $\Box$ 3 \hspace{0.5em} $\Box$ -5
+
+    \item Predict the \textbf{value} of J:
+
+    {\tt Values = [3 - x for x in range(5)]}\\
+    {\tt J = Values[-1]}\\
+    $\Box$ 1 \hspace{0.5em} $\Box$ 0 \hspace{0.5em} $\Box$ -1
+
+    \vspace{2em}
+    \hrule
+    \vspace{1em}
+
+\end{enumerate}
+\subsection*{Sets}
+\begin{enumerate}
+
+    \item Predict the \textbf{value} of C:
+
+    {\tt A = \{1,2,3,4\}}\\
+    {\tt B = \{5\}}\\
+    {\tt C = A \& B}\\
+    $\Box$ {\tt \{1,2,3,4,5\}} \hspace{3em} $\Box$ {\tt None} \hspace{3em} $\Box$ {\tt set()}
+
+    \item Predict the \textbf{value} of C:
+
+    {\tt A = \{1,2,3,4\}}\\
+    {\tt B = \{4\}}\\
+    {\tt C = A | B}\\
+    $\Box$ {\tt \{1,2,3,4\}} \hspace{3em} $\Box$ {\tt \{1,2,3,4,4\}} \hspace{3em} $\Box$ {\tt \{4\}}
+
+    \item Predict the \textbf{value} of C:
+
+    {\tt A = \{1,2,3,4\}}\\
+    {\tt B = \{1,4\}}\\
+    {\tt C = A - B}\\
+    $\Box$ {\tt \{2,3\}} \hspace{3em} $\Box$ {\tt \{1,4\}} \hspace{3em} $\Box$ {\tt set()}
+
+    \item Predict the \textbf{value} of C:
+
+    {\tt A = \{1,2,3,4\}}\\
+    {\tt B = \{1,4\}}\\
+    {\tt C = B - A}\\
+    $\Box$ {\tt \{2,3\}} \hspace{3em} $\Box$ {\tt \{1,4\}} \hspace{3em} $\Box$ {\tt set()}
+
+    \item Predict the \textbf{value} of C:
+
+    {\tt A = \{1,2,3,4\}}\\
+    {\tt B = \{4,5,6,7\}}\\
+    {\tt C = A \^ ~B}\\
+    $\Box$ {\tt \{1,2,3,4,5,6,7\}} \hspace{3em} $\Box$ {\tt \{4\}} \hspace{3em} $\Box$ {\tt \{1,2,3,5,6,7\}}
+
+    \vspace{2em}
+    \hrule
+    \vspace{1em}
+
+\end{enumerate}
+\subsection*{Loops}
+\begin{enumerate}
+
+    % LOOPS
+
+    \item Predict the \textbf{output} of the following program:
+
+    {\tt Total = 0}\\
+    {\tt for Number in range(1,5):}\\
+    \indent \hspace{2em} {\tt  if Number \% 2 == 0:}\\
+    \indent \hspace{4em} {\tt  Total += Number}\\
+    {\tt  print(Total)}\\
+    $\Box$ 4 \hspace{3em} $\Box$ 5 \hspace{3em} $\Box$ 6
+
+    \item Predict the \textbf{output} of the following program:
+
+    {\tt Total = 0}\\
+    {\tt for Number in range(1,5):}\\
+    \indent \hspace{2em} {\tt  if Number \% 2 == 1:}\\
+    \indent \hspace{4em} {\tt  Total += Number}\\
+    {\tt  print(Total)}\\
+    $\Box$ 4 \hspace{3em} $\Box$ 5 \hspace{3em} $\Box$ 6
+
+    \item Predict the \textbf{output} of the following program:
+
+    {\tt Fact = 3}\\
+    {\tt Mult = 2}\\
+    {\tt for Num in range(Fact):}\\
+    \indent \hspace{2em} {\tt  Mult = Mult + Num**2}\\
+
+    {\tt if Mult <= 10:}\\
+    \indent \hspace{2em} {\tt  print(Mult*Fact)}\\
+    {\tt else:}\\
+    \indent \hspace{2em} {\tt  print(Mult)}\\
+    $\Box$ 10 \hspace{3em} $\Box$ 21 \hspace{3em} $\Box$ 26
+
+    \item Predict the \textbf{output} of the following program:
+
+    {\tt Total = 1}\\
+    {\tt while Total <= 8:}\\
+    \indent \hspace{2em} {\tt  Total = Total * 2}\\
+    {\tt print(Total)}\\
+    $\Box$ 4 \hspace{3em} $\Box$ 8 \hspace{3em} $\Box$ 16
+
+    \item Predict the \textbf{output} of the following program:
+
+    {\tt Total = 1}\\
+    {\tt Count = 1}\\
+    {\tt while Total < 10:}\\
+    \indent \hspace{4em} {\tt  Total += Count}\\
+    \indent \hspace{4em} {\tt  Count += 1}\\
+    {\tt print(Total)}\\
+    $\Box$ 10 \hspace{3em} $\Box$ 11 \hspace{3em} $\Box$ 12
+
+\end{enumerate}
+\end{document}

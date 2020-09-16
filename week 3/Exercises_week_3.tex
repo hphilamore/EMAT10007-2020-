@@ -1,0 +1,173 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header
+\documentclass[11pt]{report}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{nicefrac}
+\usepackage[lastexercise]{exercise}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+
+\setlength{\parindent}{0cm}
+
+\renewcommand{\ExerciseHeader}{\large\textbf{\ExerciseName~\ExerciseHeaderNB} - \textbf{\ExerciseTitle}\medskip}
+
+\renewcommand{\ExePartHeader}{\medskip\textbf{\ExePartName\ExePartHeaderNB\ExePartHeaderTitle\medskip}}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{EMAT10007 -- Introduction to Computer Programming}
+\subsection*{\Large Exercises -- Week 3. Loops and Data Structures}
+
+To complete this week's exercises you will also need to download the {\tt SumFirstTenIntegers.py} and {\tt HowManySquares.py} files from Blackboard.
+
+\begin{Exercise}[title=For Loops]
+
+	For-loops are typically used when you know how many times you need to repeat something, before ending the loop. You specify a limit to the number of loops you wish to run the code for, and then the loop will automatically stop.
+	\Question{\label{Q:loopstring}A {\tt for} loop can loop over anything that is \emph{iterable} such as strings, tuples, lists and dictionaries. Try the following:
+	
+	\vspace{0.5em}
+	{\tt Words = "Hello World"}\\
+	{\tt for Letter in Words:}\\
+	{\tt \hspace*{2em}print(Letter)}
+	\vspace{0.5em}
+	
+	Try with some different words.
+	}
+	\Question{Open and run the {\tt SumFirstTenIntegers.py} program. What does it do? Research any new functions using {\tt help()}.}
+	\Question{In this program the loop is written in the following format:\\
+	{\tt for Value in range()}\\
+	Why do we use the value 11 here? What are the values of the range?
+	}
+	\Question{In Q\ref{Q:loopstring} we used the string {\tt Words} as the loop iterator. In the previous question we also saw that you can use the function {\tt range()} as a loop iterator. This is a very useful and important function in Python. Call {\tt help()} on {\tt range()} to see how it works. What will be returned by calling {\tt range(1, 11, 2)}?}
+	\Question{Can you write a loop which now prints both each letter and it's position in the string {\tt Words}?
+	
+	\textbf{Hint:} Recall the {\tt len()} function returns the length of a string. 
+	}
+	\Question{(*) Research the {\tt enumerate} function. Can you make your answer to the last question less verbose?}
+\end{Exercise}
+
+\begin{Exercise}[title=While Loops]
+	
+	While-loops are used when the number of times the program needs to loop is not known beforehand. The {\tt while} loop checks a condition statement at beginning of each loop and will carry out the loop as long as this condition is true.
+	\Question{\label{Q:whilestring} Can you finish the {\tt while} loop by replacing the {\tt <?>} in the code below?
+	
+	\vspace{0.5em}
+	{\tt Words = "Hello World"}\\
+	{\tt TargetLetter = <?>}\\
+	{\tt i = 0}\\
+	{\tt while <?>:}\\
+	{\tt \hspace*{2em} i += <?>}\\
+	{\tt print("Target letter is at position", i)}
+	\vspace{0.5em}
+	
+	Try changing {\tt Word} and {\tt TargetLetter}. Why do we have to increment the {\tt i}?
+	}
+	\Question{(*) How would you change the code to print all the occurrences of the letter?
+	
+	\textbf{Hint:} What type of loop would be best?}
+	\Question{Finding characters or substrings in a string is very useful and so Python has a built-in function {\tt str.find()}. Test for program is right by comparing with the {\tt str.find()} function for some different target letters and words.
+	
+	\textbf{Hint:} Remember the {\tt help()} function.}
+	\Question{Open and run the {\tt HowManySquares.py} program. Can you fix the code to use {\tt CamelCase} and the {\tt +=} operator?}
+	\Question{In the {\tt HowManySquares.py} example we do not know when the cumulative sum will exceed $1,000,000$. Therefore, we use a {\tt while} loop until the sum exceeds this limit, and therefore the condition no longer evaluates to {\tt True}. Can you add a line that shows the results for every step of the {\tt while} loop?}
+	\Question{(*) Using the {\tt break} keyword, can you rewrite Q\ref{Q:whilestring} using a {\tt for} loop, an {\tt if} clause and {\tt enumerate()}?}
+\end{Exercise}
+
+\begin{Exercise}[title=Lists]
+	\Question{Make two list containing the values {\tt [1,2]} and {\tt [3,4]}.}
+	\Question{Change the value 1 to the value 5.}
+	\Question{Sort the lists.
+	
+	\textbf{Hint:} Have a look at {\tt help(list)}.}
+	\Question{Make a nested list that contains both lists.}
+	\Question{Use two loops to print out all the values in the nested list (2x2 matrix) one by one.}
+	\Question{Write a program that asks the user to input a list of 10 words (strings) and which then creates a list containing the length of each word. Print out each word and word length, like so:
+	
+	\vspace{0.5em}
+	{\tt Word: Algorithm - Word length: 9}
+	\vspace{0.5em}
+	
+	\textbf{Hint:} You can read all $10$ words at a time, as one large string, and use the {\tt .split()} function on the string. Read the documentation if you are unfamiliar with the {\tt split} function. Then loop through the resulting list of words and print out the length of each word.}
+	\Question{(*) List comprehension is an elegant way to produce lists using loops and conditional statements. Read how to do this here: \url{https://www.pythonforbeginners.com/basics/list-comprehensions-in-python}
+	
+	Using list comprehension, create lists of the following between 0 and 100:
+	\begin{itemize}
+	    \item odd numbers
+	    \item multiples of 3
+	    \item prime numbers (extra tricky)
+	\end{itemize}
+	}
+\end{Exercise}
+
+\begin{Exercise}[title=Tuples]
+	\Question{Have a look at {\tt help(tuple)}.}
+	\Question{Make a tuple named {\tt FondueIngredients} containing the values ``gruyere'' and ``vacherin''.}
+	\Question{Print all the items in the tuple.}
+	\Question{Change the value ``gruyere'' to the value ``cheddar''. Does it work? Why?
+	
+	\textbf{Note:} Fondue recipes are sacred.}
+	\Question{Is there a function to remove the last item of the tuple? How else could you do it?}
+\end{Exercise}
+
+\begin{Exercise}[title=Sets]
+	\Question{Have a look at {\tt help(set)}.}
+	\Question{Make two set {\tt s1 = \{1,2,5,5,8\}} and {\tt s2 = \{1,2,4,9,2\}}. Print out the sets, are there any duplicates?}
+	\Question{Can you access an element of the set based on index e.g. {\tt s1[2]}?}
+	\Question{Use the keyword in to check if 4 is in both sets.}
+	\Question{Use the operators {\tt \&}, {\tt |}, {\tt -}, {\tt \^{}}. What do they do?}
+	\Question{Remove the value 1 from the first set, and add the value 6.}
+\end{Exercise}
+
+\begin{Exercise}[title=Dictionaries]
+	\Question{Have a look at {\tt help(dict)}.}
+	\Question{Make a dictionary that contains {\tt \{"Jill":21, "Sally”:20, "Bob”:20, "Harry”:21\}}. Remember to give it a sensible name in {\tt CamelCase}.}
+	\Question{Print out all the keys in the dictionary. Use {\tt help(dict)} to work out how to do this.}
+	\Question{Add the item {\tt "Rachel":19} to the dictionary.}
+	\Question{Remove the item {\tt "Bob"}.}
+	\Question{Add the item {\tt "Jill":22} to the dictionary. Are there two Jills now?}
+	\Question{Check if {\tt "Harry"} is in the dictionary.}
+\end{Exercise}
+
+\begin{Exercise}[title=More Loops]
+
+	Use loops and conditionals to solve the following problems:
+	\Question{Write a program that assigns two variables, say {\tt A} and {\tt B}, to the throws of two random dice. Your program should keep reassigning dice throws to {\tt A} and {\tt B} until {\tt A == B}. Then, create another variable to count the number of times the program assigns A and B random values until both numbers are equal. When this happens, print out a success message and the number of assignments it took for {\tt A == B}.
+	
+	\textbf{Hint:} Recall you replicated dice throws in for an exercise in Week 1.}
+    \Question{Implement the ``Number Guessing Game'', which works in the following way:
+    \begin{itemize}
+        \item Pick a random number between 1 and 100.
+        \item Ask the user to guess the number using the {\tt input()} function.
+        \item Tell the user if they are correct and stop the program. If they are incorrect, tell them whether their guess is too low or too high.
+        \item Repeat until the user has guessed correctly.
+        \item Congratulate the user on guessing the number and tell them how many guesses it took them.
+    \end{itemize}
+	What about when the user guesses a number out of range? Add a check to your program to instruct the user to enter a guess within the accepted range.}  
+\end{Exercise}
+
+\begin{Exercise}[title=FizzBuzz Game (*)]
+
+ 	In the game FizzBuzz, we count from 1 to $n$, replacing any multiple of $3$ with the word ``Fizz'' and any multiple of $5$ with the word ``Buzz'' As follows:
+ 	
+ 	\centering
+ 	\vspace{0.5em}
+	``$1$, $2$, Fizz, $4$, Buzz, Fizz, $7$, $8$, Fizz, Buzz, $11$, Fizz, $13$, $14$, FizzBuzz, $...$''.
+	\vspace{0.5em}
+	
+	\Question{Create two variables {\tt Mult3} and {\tt Mult5}, setting the values of them to be the strings {\tt "Fizz"} and {\tt "Buzz"}, respectively.}
+	\Question{Create an additional variable {\tt Limit}, which will be the number we count up to.}
+	\Question{At the beginning of your program, after you have assigned {\tt Mult3} and {\tt Mult5} their values, you will need to ask the user to \textbf{input} a value for {\tt Limit}. This can be done using the {\tt input()} function, which waits for the user to input some \emph{string} when you run your program, before continuing.
+	
+	\textbf{Hint:} you will need to \textbf{convert} the input string created by {\tt input()} into an integer, using {\tt int()}.}
+	\Question{The computer should say each number from 1 to {\tt Limit}, replacing each multiple of $3$ with the word ``Fizz'' and each multiple of $5$ with ``Buzz''.
+	What kind of \textbf{loop} will you need for this?}
+	\Question{You will also need to use the {\tt \%} operator, which returns the remainder of a division e.g. $4~\textrm{mod}~3 = 1$ and $15~\textrm{mod}~3 = 0$, indicating that $15$ is a multiple of $3$. You will need to check whether each number is either a multiple of 3, a multiple of 5, or \emph{both}.
+	
+	\textbf{Hint:} Start with the basic loop, printing out each number, and then work on replacing it with ``Fizz'', ``Buzz'', or ``FizzBuzz'', in stages.}
+\end{Exercise}
+
+\end{document}

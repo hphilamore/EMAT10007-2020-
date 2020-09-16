@@ -1,0 +1,75 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header
+\documentclass[11pt]{report}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{enumitem}
+\usepackage{color,soul}
+\usepackage[lastexercise]{exercise}
+
+\setlength{\parindent}{0cm}
+
+
+
+\renewcommand{\ExerciseHeader}{\large\textbf{\ExerciseTitle}\medskip}
+
+\renewcommand{\ExePartHeader}{\medskip\textbf{\ExePartName\ExePartHeaderNB\ExePartHeaderTitle\medskip}}
+
+\renewcommand{\QuestionNB}{$\bullet$ }
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{EMAT10007 -- Introduction to Computer Programming}
+\subsection*{\Large Assignment 2 -- Examples 2019}
+
+
+\begin{Exercise}[title=AS]
+
+    A  text based adventure which has attempted to incorporate three simple games (made with pygame). One is a coin collection game (collect coins/avoid fire), another is a platform game and the last is a nonogram game.
+    
+    Points to consider:
+    \Question{Attempt has been made to integrate the games within the text based adventure, although this is very buggy. The coin collection game works well if you win, but causes the text adventure to end prematurely if you loose. The platform game loads automatically, but then fails to end. The nonogram game was not incorporated and actually loads right at the beginning and has to be closed before the text adventure game can begin.}
+    \Question{Has nice features such as a slow motion typing effect for the test based adventure. Also the illusion of your character being illuminated in the platform game. The nonogram game also has a start screen with instructions.}
+    \Question{All games have interesting sprite images and backgrounds.}
+    \Question{No instructions about what code to actually run.}
+    \Question{Robust to user input}
+\end{Exercise}
+
+\begin{Exercise}[title=YAM]
+
+    A integral calculator which copes with linear, quadratic, cubic and quartic polynomials. Asks the user for coefficients and boundaries. Then computes the definite integral and plots the polynomial showing the shaded region for the integral.
+    
+    Points to consider:
+    \Question{Robust to user input}
+    \Question{Uses both numpy and maptlotlib.}
+    \Question{User interaction is easy.}
+    \Question{Everything tested works and is correct.}
+\end{Exercise}
+
+\begin{Exercise}[title=HP]
+
+    A text based quiz game comprising of three rounds (capital cities, sport, music). You can play as a single player or a two player version.
+    
+    Points to consider:
+    \Question{Robust to user input}
+    \Question{No obvious bugs but quite a lag when printing text.}
+    \Question{Some randomness to questions, also not had the same question appear in a round.}
+    \Question{User interaction is easy and straightforward.}
+\end{Exercise}
+
+\begin{Exercise}[title=KW]
+
+    A very simple Snake game implemented with pygame where the user needs to collect the food to grow and dies if they hit the edges of the window.
+    
+    Points to consider:
+    \Question{Added extras include a soundtrack and a game over screen with the score.}
+    \Question{Only uses a plain black background and blocks for the sprites. Food is purple and the snake head is grey and body is white.}
+    \Question{Score appears as text in the screen.}
+    \Question{No obvious bugs.}
+\end{Exercise}
+
+\end{document}

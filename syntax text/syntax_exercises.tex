@@ -1,0 +1,282 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header
+\documentclass[11pt]{report}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Class Test: Syntax Test}
+\section*{EMAT10007 - Introduction to Computer Programming}
+\section*{Class Test: Syntax Test}
+\subsection*{Overview}
+\begin{itemize}
+    \item Friday \textbf{9th November} is the ``Syntax Test'' class test. You will be tested on your understanding of the core principles of programming, with emphasis on the specific syntax used by the Python programming language.
+
+	\item The test will be multiple choice and possibly multiple-answer.
+
+    \item If you're wondering ``where are the answers to the exercises?'', look to PyCharm! The best way to revise for this test is to work through the examples in PyCharm, and to modify the examples until you understand the answer to the question.
+
+    \item Please use the Support Forums to ask questions.\\
+    \item \textbf{Changes and corrections:}
+    \begin{enumerate}
+        \item Comments should always confer the intent of the working program, and so these should be used as hints for what the program should do without errors.
+        \item \underline{Question 6}: Line 6 is purposefully written to cause the program to produce an error (that {\tt Number} is a {\tt string}, and not an {\tt int}). The error on the line is that:\\
+        {\tt for Num in range(Number):}\\
+        should be:\\
+        {\tt for Num in range(int(Number)):}\\
+        This is because attempting to produce a {\tt range()} using a {\tt string} produces:\\
+        {\tt TypeError: `str' object cannot be interpreted as an integer}. I have corrected {\tt range(Num)} to be {\tt range(Number)}.\\
+        The next line, {\tt Sum = Sum + Num}, is not an error because if you correct {\tt range(Number)} to be {\tt range(int(Number))} on the line above, then it would not produce an error.
+        \item You should pay close attention to when a program might be missing calls to the conversion functions, such as {\tt int()}, {\tt float()}, and {\tt str()}. This comes from trying to add strings and numbers together, such as in {\tt print()}, or when trying to add two numbers, but one is still a {\tt string}.
+        \item New questions have been added. We may test you on things we didn't cover fully before in the Elementary Concepts tests, such as lists, sets, and dictionaries.
+        \item \underline{Question 9}: Line 5 should have been {\tt print(Sentence)}, not {\tt print(WordList)}.
+    \end{enumerate}
+\end{itemize}
+
+\section*{Practice exercises}
+
+\begin{enumerate}
+
+    \item Select the lines that will produce syntax errors:
+
+    \begin{verbatim}
+# Ask for a number
+N = input("Enter a number:)
+
+Is it bigger than 10?
+if N > 10
+    print N
+else:
+    print(N * 2)
+    \end{verbatim}
+    $\Box$ Line 1 \hspace{3em} $\Box$ Line 2 \hspace{3em} $\Box$ Line 4\\
+    $\Box$ Line 5 \hspace{3em} $\Box$ Line 6 \hspace{3em} $\Box$ Line 8
+
+    \item Select the missing function:
+
+    \begin{verbatim}
+Ingredients = {"Bread":2, "Cheese":3, "Garlic":0.5}
+Total = 0
+
+# Calculate the price to make a fondue
+for Num in Ingredients._____():
+    Total = Total + Num
+
+# Print the total price
+print(Total)
+    \end{verbatim}
+    $\Box$ {\tt key} \hspace{3em} $\Box$ {\tt keys} \hspace{3em} $\Box$ {\tt value} \hspace{3em} $\Box$ {\tt values}
+
+    \item Select the lines that will produce syntax errors:
+
+    \begin{verbatim}
+Fondue = ["Bread", "Cheese", "Garlic"]
+    Total = 0
+
+# Go through the list
+for Item in Fondue:
+    if len(Item) = 5:
+        Total += len(Item)
+
+print(Total)
+    \end{verbatim}
+    $\Box$ Line 1 \hspace{3em} $\Box$ Line 2 \hspace{3em} $\Box$ Line 4\\
+    $\Box$ Line 5 \hspace{3em} $\Box$ Line 6 \hspace{3em} $\Box$ Line 7
+
+    \item Select the missing operators:
+
+    \begin{verbatim}
+Numbers = [5, 6, 4, 4, 3]
+Total = 0
+
+for Num in Numbers:
+    if Num % 2 == 0:
+        Total __ 1
+    else:
+        Total __ 1
+
+# Print the total
+print(Total)
+-----
+Output: 1
+    \end{verbatim}
+    $\Box$ {\tt -= +=} \hspace{3em} $\Box$ {\tt =+ =-} \hspace{3em} $\Box$ {\tt += -=}
+
+    \item Select the missing operators:
+
+    \begin{verbatim}
+Numbers = [5, 6, 4, 4, 3]
+Total = 0
+
+for Num in Numbers:
+    if Num % 2 == 0:
+        Total __ 1
+    else:
+        Total __ 1
+
+# Print the total
+print(Total)
+-----
+Output: -1
+    \end{verbatim}
+    $\Box$ {\tt -= -=} \hspace{3em} $\Box$ {\tt -= +=} \hspace{3em} $\Box$ {\tt += -=}
+
+    \item Select the lines that will produce syntax errors:
+
+    \begin{verbatim}
+# Ask the user to pick a number
+Number = input(Pick an integer:)
+
+# Sum all the numbers up to Number
+Sum = 0
+for Num in range(Number):
+    Sum = Sum + Num
+
+""" Print the sum """
+print Sum
+    \end{verbatim}
+    $\Box$ Line 2 \hspace{3em} $\Box$ Line 5 \hspace{3em} $\Box$ Line 6\\
+    $\Box$ Line 7 \hspace{3em} $\Box$ Line 9 \hspace{3em} $\Box$ Line 10
+
+    \item Select the lines that will produce syntax errors:
+
+    \begin{verbatim}
+Word = "hello world"
+Vowels = [a,e,i,o,u]
+
+# Print the word, but with each vowel
+# converted to upper-case
+for Letter in Word:
+    if Letter in Vowels
+        print(upper(Letter), end="")
+    else
+        print(Letter, end="")
+    \end{verbatim}
+    $\Box$ Line 1 \hspace{3em} $\Box$ Line 2 \hspace{3em} $\Box$ Line 6 \hspace{3em}
+    $\Box$ Line 7\\
+    \hspace{3em} $\Box$ Line 8 \hspace{3em} $\Box$ Line 9 \hspace{3em} $\Box$ Line 10
+
+    \item Select the missing functions:
+
+    \begin{verbatim}
+WordList = []
+
+# Take a sentence and add each word
+# to the WordList
+Sentence = "How is the weather?"
+for Word in Sentence._______(" "):
+    WordList._______(Word)
+print(WordList)
+-----
+Output: ["How", "is", "the", "weather?"]
+    \end{verbatim}
+    $\Box$ {\tt separate, add} \hspace{2em} $\Box$ {\tt split, add} \hspace{2em} $\Box$ {\tt split, append} \hspace{2em} $\Box$ {\tt separate, append}
+
+    \item Select the missing function call:
+
+    \begin{verbatim}
+WordList = ["How", "is", "the", "weather?"]
+
+# Combine the words to form a sentence
+Sentence = _____________
+print(Sentence)
+-----
+Output: "How is the weather?"
+    \end{verbatim}
+    $\Box$ {\tt WordList.join(" ")} \hspace{2em} $\Box$ {\tt WordList.combine(" ")}\\
+    $\Box$ {\tt join(WordList)} \hspace{4.1em} $\Box$ {\tt " ".join(WordList)}
+
+\vspace{2em}
+\hrule
+\vspace{2em}
+
+\item Predict the type of A:
+
+\begin{verbatim}
+A = {3, 5, "6", 8.5, 10}
+\end{verbatim}
+$\Box$ {\tt Set} \hspace{2em} $\Box$ {\tt Tuple} \hspace{2em} $\Box$ {\tt List}
+
+\begin{verbatim}
+A = {"Length" : 1.2, "Width" : 2.5, "Height" : 3}
+\end{verbatim}
+$\Box$ {\tt Set} \hspace{2em} $\Box$ {\tt Dict} \hspace{2em} $\Box$ {\tt List}
+
+\item Select the correct index:
+
+\begin{verbatim}
+A = [1,2,3,4,5]
+print(A[_])
+-----
+Output: 3
+\end{verbatim}
+$\Box$ {\tt 1} \hspace{2em} $\Box$ {\tt 2} \hspace{2em} $\Box$ {\tt 3}
+
+\begin{verbatim}
+A = {"0" : 1, "1" : 2, "2" : 3}
+print(A[_])
+-----
+Output: 2
+\end{verbatim}
+$\Box$ {\tt 1} \hspace{2em} $\Box$ {\tt "1"} \hspace{2em} $\Box$ {\tt 2} \hspace{2em} $\Box$ {\tt "2"}
+
+\begin{verbatim}
+A = {"Length" : 1.2, "Width" : 2.5, "Height" : 3}
+\end{verbatim}
+$\Box$ {\tt Set} \hspace{2em} $\Box$ {\tt Dict} \hspace{2em} $\Box$ {\tt List}
+
+\item Select the lines that will produce syntax errors:
+
+\begin{verbatim}
+Number = 101
+print("Multiples of 10 up to" + Number)
+# Print out the multiples of 10
+for Num in range(Number):
+    if Num % 10 = 0:
+        print(Num, "is a multiple of 10!")
+\end{verbatim}
+$\Box$ Line 1 \hspace{3em} $\Box$ Line 2 \hspace{3em} $\Box$ Line 3\\
+$\Box$ Line 4 \hspace{3em} $\Box$ Line 5 \hspace{3em} $\Box$ Line 6
+
+\item Select the missing values:
+
+\begin{verbatim}
+WordList = ["Hello", "world"]
+
+# Print the two words as a sentence
+print(WordList[_] __ WordList[_])
+-----
+Output: "Hello world"
+\end{verbatim}
+$\Box$ {\tt 1 , 2} \hspace{2em} $\Box$ {\tt 1 + 2} \hspace{2em} $\Box$ {\tt 0 + 1} \hspace{2em} $\Box$ {\tt 0 , 1}
+
+\item Select the missing function:
+
+\begin{verbatim}
+A = {1,2,3,4,5}
+A.______(3)
+print(A)
+-----
+Output: {1,2,4,5}
+\end{verbatim}
+$\Box$ {\tt delete} \hspace{2em} $\Box$ {\tt remove} \hspace{2em} $\Box$ {\tt update} \hspace{2em} $\Box$ {\tt clear}
+
+\item Select the lines that will produce syntax errors:
+
+\begin{verbatim}
+import random
+Number = input("Please enter an integer:')
+Sum = random.randint(1,10)
+# Add the user's number to Sum
+Sum += Number
+\end{verbatim}
+$\Box$ Line 1 \hspace{3em} $\Box$ Line 2 \hspace{3em} $\Box$ Line 3 \hspace{3em}
+$\Box$ Line 4\\
+$\Box$ Line 5
+
+\end{enumerate}
+\end{document}

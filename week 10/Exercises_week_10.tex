@@ -1,0 +1,108 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hea
+\documentclass[11pt]{report}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Exercises - Week 10: Pygame}
+\subsection*{Introduction to Computer Programming}
+\subsection*{Exercises - Week 10: Pygame}
+\begin{enumerate}
+	\item \textbf{Review last week's exercise sheet}
+	\begin{itemize}
+		\item Last week's exercise sheet was on developing your own classes
+		% , making a module to contain related classes,
+		and using inheritance. This will be important for today's exercise sheet, so please do work through that sheet first.
+		% , as most left immediately after the syntax test.
+
+		% \item You can of course spend this session working purely on your project, but these exercises are here to help demonstrate how you might build upon a basic outline of a game as Helmut showed on Monday.
+	\end{itemize}
+
+	\item {\bf Making an `enemy' class.}\\
+	The goal of this exercise is to write a class that produces the behaviour of an enemy sprite, which will wander randomly and will steal a random amount of gold bricks from any player it touches. Start by downloading the {\tt PyGame\_base\_code.py} program from Blackboard, as we will use this as our base.
+	\begin{itemize}
+		\item Write a class called {\tt Enemy} that inherits from the {\tt pygame.sprite.Sprite} class. We want to create a class that is very similar in structure to the {\tt Player} class i.e.\ creating a square sprite, colouring it, initialising its speed variables to $0$ etc.
+
+		\item Start by implementing an \verb|__init__()| method that follows the general layout from the {\tt Player} class:
+
+		\begin{enumerate}
+			\item Add a new argument to the \verb|__init__()| method to set the size of the enemy sprite as well as the starting x and y coordinates.
+
+			\item Make the default colour of the enemy sprite be {\tt RED} (you will have to define a new colour at the top of the code).
+
+			\item Set the {\tt self.size} variable to store the size argument.
+
+			\item The rest should be kept the same.
+		\end{enumerate}
+
+		\item Implement the same \verb|update()| method, as the game requires that all sprites implement an update method.
+
+		\item Next, we're going to add a new method to our {\tt Enemy} class which, given an {\tt EnemySpeed} and the length and width of the window, has our enemy move randomly within the window:
+
+		\begin{enumerate}
+			\item Because we want our Enemy to change direction at random times, rather than every time we loop through the main code, we need to begin by creating a {\tt delay} variable inside the Enemy class (but not within the new method -- usually at the top underneath the class definition) and setting it to $0$.
+
+			\item Create a method with the following signature:\\
+			\verb|moveRandomly(self, speed, xLimit, yLimit):|\\
+			where {\tt speed} will be the speed at which the enemy moves. {\tt xLimit} and {\tt yLimit} will be the window's width and height, to act as bounds within which our enemy will move.
+
+			\item Then, {\tt IF delay == 0}, we will set a random direction for our enemy:
+
+			\begin{itemize}
+				\item For each possible compass direction e.g. a random direction in \\
+				$[\mathbf{``N", ``NE", ``E", ``SE", ``S", ``SW", ``W", ``NW"}]$\\
+				pick a random direction in the list and have the sprite change its {\tt change\_x} and {\tt change\_y} values to move in that direction based on its speed.
+
+				\item Then, after picking an initial direction to travel in (as delay is set to $0$ when the sprite is created), we need to pick a random value for delay e.g. a value between $5$ and $100$.
+			\end{itemize}
+
+			\item {\tt ELSE}
+
+			\begin{itemize}
+				\item decrement the {\tt delay} variable by $1$
+			\end{itemize}
+
+			\item Then, we need to ``bounce'' the enemy. This can be tricky but the gist is that:
+
+			\begin{itemize}
+				\item If the enemy position is too far left ($< 0$) or too far right ($>$ {\tt xLimit}), reverse the x-direction e.g.\\
+				{\tt change\_x = change\_x * -1}
+
+				\item Similarly, if the enemy position is too high ($< 0$) or too low ($>$ yLimit), reverse the y-direction e.g.\\
+				{\tt change\_y = change\_y * -1}
+
+				\item To be more precise, you will need to adjust the conditions checking the xLimit and yLimit to account for the size of the sprite.
+			\end{itemize}
+
+		\end{enumerate}
+
+		\item Create a new instance of the {\tt Enemy} class, assigning it to a variable called {\tt Enemy1} and giving it a starting position and size e.g. $(400, 400)$ and $30$. Then add the enemy to the {\tt AllSpritesList}, so that it will be drawn on-screen with the other sprites.
+
+		\item After the input loop, but \textbf{before} \verb|AllSpritesList.update()|, add a call to our Enemy's {\tt moveRandomly()} method, passing in the window's dimensions as follows:\\
+		\verb|Enemy1.moveRandomly(EnemySpeed, 800, 600)|
+		where {\tt EnemySpeed} should probably be a lower value than the {\tt SPEED} variable we set for the players e.g.\ $5$. We could increase the difficulty later by increasing the {\tt EnemySpeed}.
+	\end{itemize}
+
+	\item {\bf Adding collision detection to the enemy class.}\\
+	Now that we have our enemy moving in random directions, we need to have the {\tt Enemy} sprite detect when it touches a player, and then reduce the player's score by stealing a random amount of gold bricks.\\
+
+	We can use the existing collision detection code as a basis for having the enemy detect when it touches a player.
+
+	\begin{itemize}
+		\item First, we will need to add the players to a new sprite group, called {\tt PlayerList}, so that we can detect collisions for \textbf{only} the players, and not the gold bars.
+
+		\item Then, add both {\tt Player1} and {\tt Player2} to our {\tt PlayerList}.
+
+		\item Next, in the same location as we detect if players are touching the gold bars, we need to check if {\tt Enemy1} is touching any players in {\tt PlayerList}, and store the result in a list called {\tt EnemyHitList}.
+
+		\item Finally, we can set an amount to be stolen as {\tt stealAmount}, and loop through the list. For each player in the list, reduce their score by {\tt stealAmount}. You should also check that if {\tt player.score < 0}, that you set their score to $0$ so that they cannot possess a negative score.
+
+		\item \textbf{Extension:} If you wanted, you could even implement a score for the enemy sprite and display the total amount of stolen gold bricks between the scores of Player1 and Player2.
+	\end{itemize}
+\end{enumerate}
+\end{document}

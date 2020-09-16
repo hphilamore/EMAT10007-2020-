@@ -1,0 +1,149 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header
+\documentclass[11pt]{report}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{enumitem}
+\usepackage{color,soul}
+\usepackage[lastexercise]{exercise}
+
+\setlength{\parindent}{0cm}
+
+
+
+\renewcommand{\ExerciseHeader}{\large\textbf{\ExerciseHeaderNB} - \textbf{\ExerciseTitle}\medskip}
+
+\renewcommand{\ExePartHeader}{\medskip\textbf{\ExePartName\ExePartHeaderNB\ExePartHeaderTitle\medskip}}
+
+\renewcommand{\QuestionNB}{$\bullet$ }
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{EMAT10007 -- Introduction to Computer Programming}
+\subsection*{\Large Assignment 2 -- Mark Scheme 2019}
+
+There are a total of 100 points available. This project is a weighted 60\% of the overall mark. 
+
+\medskip
+
+Note that we assess if they have understood the principles and can employ them to solve problems. 
+
+\medskip
+
+If you are in doubt, please let me know. Also, if you see plagiarism please let me know. (Either in person at the marking session or by email and highlighting on the online spreadsheet.)
+
+
+\begin{Exercise}[title=Originality and creativity (10 marks)]
+    \begin{itemize}
+        \item [$\square$] \textbf{1-3}: Carbon copy of one of the proposed games or ideas e.g. noughts and crosses, basic text based game or app, hangman, etc
+	    \item [$\square$]\textbf{4-7}: An exisiting game or idea with some added creativity e.g. some imaginative additions to snake/platform games or a basic simulation.
+	    \item [$\square$]\textbf{8-10}: Really interesting and original idea OR a major rethinking of an existing game/idea. 
+	\end{itemize}
+\end{Exercise}
+
+\begin{Exercise}[title=Challenge (20 marks)]
+    \Question{\textbf{Scope (10 marks)} - How ambitious was the project?
+    \begin{itemize}
+	    \item[$\square$] \textbf{1-3}: Basic project using no external modules. Higher in this bound might be attempting some file reading or use modules such as math or random.
+	    \item[$\square$] \textbf{4-7}: More advanced project perhaps using an interactive GUI using one of the external modules shown extensively in the lectures so either Tkinter or Pygame. Marks depend on complexitity i.e. how different are they from what has been shown in the lectures.
+	    \item[$\square$] \textbf{8-10}: Ambitious and advanced project using an external module not covered very much, or at all, in lectures. This includes numpy, matplotlib, pandas, turtle, etc. 
+    \end{itemize}
+    }
+    \Question{\textbf{Solution (10 marks)} - How much effort, technical challenge and interesting solutions were involved?}
+    \begin{itemize}
+	    \item[$\square$] \textbf{1-8}: How far did they challenge and how much effort did they put in? For example, a game where play immediately launches and the player is a box would score lower here, whereas if the project has added characters, start screens, end screens, music etc they would score higher.
+	    \item[$\square$] \textbf{8-10}: The very top marks are reserved for any interesting/novel solutions.
+    \end{itemize}
+\end{Exercise}
+
+\begin{Exercise}[title=Usability (10 marks)]
+	\begin{itemize}
+	    \item[$\square$] \textbf{0}: Program doesn't work at all!
+	    \item[$\square$] \textbf{1-3}: Major bugs that seriously affect user experience (e.g. crashes, getting stuck, etc.)
+	    \item[$\square$] \textbf{4-7}: Only minor bugs and the program is intuitive and easy to interact with/
+	    \item[$\square$] \textbf{8-10}: No issues/very minor bugs that don't affect interaction and the game/program is enjoyable or interesting to use.
+	\end{itemize}
+\end{Exercise}
+
+\begin{Exercise}[title=Features (20 marks)]
+    Mark each of the following out of 5 (0 if no usage):
+    \Question{Variables
+        \begin{itemize}
+            \item[$\square$] \textbf{1-3}: Variables used sensibly. Understanding of reassignment shown. Constants are used and never reassigned.
+            \item[$\square$] \textbf{4-5}: Understanding of variable scope. Multiple assignment.
+        \end{itemize}}
+    \Question{Data types and data structures
+        \begin{itemize}
+            \item[$\square$] \textbf{1-3}: Sensible use of at least one data structure and one data type.
+            \item[$\square$] \textbf{4-5}: More nuanced use showing deeper understanding i.e. not just defaulted to putting everything in a list. Data type checking.
+        \end{itemize}}
+    \Question{Functions
+        \begin{itemize}
+            \item[$\square$] \textbf{1-3}: Used sensibly to replace code that would be repeated. Use of arguments and return statements at least once.
+            \item[$\square$] \textbf{4-5}: Consistently good repeated use. Default arguments or returning multiple variables.
+        \end{itemize}}
+    \Question{Classes
+        \begin{itemize}
+            \item[$\square$] \textbf{1-3}: Used sensibly as an \textbf{abstract} container/object. Initialised with attributes and has methods.
+            \item[$\square$] \textbf{4-5}: Demonstrates understanding of class inheritance. 
+        \end{itemize}}
+        
+    \textbf{Note:} Be careful of students including features which have no use but are just there to pick up extra marks!
+\end{Exercise}
+
+\begin{Exercise}[title= General Implementation (20 marks)]
+
+Mark each of the following out of 5:
+    \begin{itemize}
+        \item[$\square$] Sensible naming of variables, using CamelCase and uppercase for constants.
+        \item[$\square$] Useful and sensible comments in the code.
+        \item[$\square$] Efficient/taut code implementation. Avoids repeating/redundant code as much as possible.
+        \item[$\square$] Correct structure and sensible control flow. Are all import statements at the top? Have they used a complex file structure to organise their code?
+    \end{itemize}
+
+(\textbf{0}: no usage, \textbf{1-3}: basic usage, kept fairly consistent and \textbf{4-5}: good, consistent implementation)
+\end{Exercise}
+
+\begin{Exercise}[title=Report (20 marks)]
+The report is here to help us to see if they understand their code and to check for plagiarism: 
+    \Question{Coding/Deign choices (10 marks) - the should explain:
+    \begin{itemize}
+	    \item[$\square$] Why did they use a particular data structure, control flow or module.
+	    \item[$\square$] How they implemented a class or function.
+	    \item[$\square$] How they overcame any challenges, problems or bugs, etc.
+    \end{itemize}
+    }
+    \Question{Analysis (10 marks) - they should explain:}
+    \begin{itemize}
+	    \item[$\square$] What worked and what didn't work and why.
+	    \item[$\square$] What could be changed or improved and how.
+    \end{itemize}
+\end{Exercise}
+    
+For the report also consider:
+\begin{itemize}
+    \item If sufficient instructions for how to use their code haven't been included then deduct a few marks.
+    \item Marks should be penalised if the report is significantly under/over the page limit e.g. it should be difficult to get more than 10 marks if it is only half a page.
+    \item Waffle should not be given any marks - for example: "I really enjoyed football as a kid" or "I wanted to make a game that would be fun"...
+    \item They should reference any external code or ideas that they may have used, marks may be penalised if they do not.
+    \item \textbf{Check for plagiarism.}
+\end{itemize}
+
+\begin{Exercise}[title=Feedback]
+
+This feedback is still very useful to the students as they continue with Python next semester. Here are couple of points that to consider:
+    \Question{Start with positives about the project, such as the progress they made or highlight anything they did well.}
+    \Question{\textbf{Be constructive in your criticism.} This feedback should be mostly based on what is taught; limit your expectations a little, but provide additional suggestions if you think they would help.
+    
+    E.g. `I would strongly caution against using global variables in functions, as their use does not scale well for larger projects as it means you can overwrite important variables. Instead a better approach would be to return the variables from functions.'}
+    \Question{Avoid using \textbf{you} when talking about negatives, only positives.}
+    \Question{Comment on overall structure.}
+    \Question{Is the code readable? What could be improved.}
+    \Question{Where did they score extra marks, or lose marks and why?}
+\end{Exercise}
+
+\end{document}

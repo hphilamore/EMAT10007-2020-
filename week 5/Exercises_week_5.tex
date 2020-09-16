@@ -1,0 +1,58 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hea
+\documentclass[11pt]{report}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Exercises - Week 5: Classes}
+\subsection*{Introduction to Computer Programming}
+\subsection*{Exercises - Week 5: Classes}
+\begin{enumerate}
+	\item {\bf Defining classes.}\\
+	The goal of this exercise is to write a program that creates a shopping list and then prints out all of the items and the total price.
+	\begin{itemize}
+		\item Write a class called {\tt Item} that has a constructor \verb|__init__(self)| that prints ``This is an item". From your main program, create an object of class Item called Apple. Run the program.
+		\item Change the constructor to include 3 additional arguments: \\\verb|__init__(self, Description, Number, UnitPrice)|. Change the print statement to print ``Created a new item: {\tt X}'', where {\tt X} is the item description.
+
+		From your main program, create an object of class Item called Apple with parameters ``Apple", 1, and 0.5. Call {\tt print(Apple.Description,Apple.Number,Apple.UnitPrice)} to print out the information.
+		\item Include a function in your class called {\tt PrintItemInfo(self)} that prints all the information about the item. Call {\tt Apple.PrintItemInfo()} from the main program.
+		\item Override the built-in \verb|__str__()| function so that printing the instance of {\tt item} prints the name of that item.\\
+		Then, create a list called {\tt ShoppingList}, add the Apple, and 2 other items to the list. Loop through the list and print out each item using the overridden \verb|__str__()| method (hint: to do so, you can wrap each item in {\tt str()}).
+		\item Write a loop in the main program to go over all items in {\tt ShoppingList}, print out the item information and sum the total price (the price for one item is {\tt Number*UnitPrice}). Print out the total price at the end.
+	\end{itemize}
+
+	% \item {\bf Creating a module.}\\
+	% Now we're going to take the class that we have created, and use it to form the basis of a {\tt module}. In a module, we can put multiple class files and allow python programs to import the different classes from it. This way, we can group related classes.
+	% \begin{itemize}
+	% 	\item Create a new file called {\tt shopping\_list.py}.
+	% 	\item Create a folder in your working directory called {\tt shopping}. Then, add a new file called {\tt item.py}.
+	% 	% \textbf{Note:} If your version of python is $< 3.3$ you will also need to create an \textbf{empty} file in the {\tt shopping} directory called \verb|__init__.py|
+	% 	\item Copy your {\tt Item} class into the new {\tt item.py} file.
+	% 	\item Now, to access our {\tt Item} class in our {\tt shopping\_list.py} program, we need to add the following line to the top:\\
+	% 	{\tt from shopping import item}\\
+	% 	which will tell python that we wish to import the classes contained in the {\tt item.py} file from within the {\tt shopping} module. In python, the structure of a module is determined by the structure of the directory.
+	% 	\item To use the {\tt Item} class is now the same as before, but we must precede it with the file name as follows:\\
+	% 	...\\
+	% 	{\tt ShoppingList.append(item.Item("Apple", 1, 0.5))}\\
+	% 	...
+	% 	\item Create a shopping list as before, but now making use of the {\tt shopping} module that we just imported {\tt item} from. Most of this will be the same, but with the new syntax for calling {\tt Item()} as shown above.
+	% \end{itemize}
+
+	\item {\bf Deriving a class with inheritance.}
+	\begin{itemize}
+		\item Add a new class called {\tt SpecialItem} % in {\tt item.py}
+		which \emph{inherits} from the {\tt Item} class.
+		\item The class signature should look like the following:\\
+		\verb|def __init__(self, Description, Number, UnitPrice, SpecialInfo):|\\
+		and should call the \verb|__init__()| function of the Item class passing in the {\tt Description}, {\tt Number}, and {\tt UnitPrice} arguments, but storing the new variable {\tt SpecialInfo} as a member variable of the new class.
+		\item As we did in the {\tt Item} class, override the built in \verb|__str__()| function to print the item description, but this time have it also print out the special information via {\tt self.SpecialInfo}.
+		\item Override the {\tt PrintItemInfo()} method of the {\tt Item} class
+		\item Add a few special items to your shopping list that require instructions via the {\tt SpecialInfo} argument, such as {\tt Paracetamol: Take two tablets every 6 hours}.
+	\end{itemize}
+\end{enumerate}
+\end{document}

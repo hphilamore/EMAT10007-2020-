@@ -1,0 +1,210 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header
+\documentclass[11pt]{report}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{enumitem}
+\usepackage{color,soul}
+\usepackage[lastexercise]{exercise}
+
+\setlength{\parindent}{0cm}
+
+\renewcommand{\ExerciseName}{Part}
+
+\renewcommand{\ExerciseHeader}{\large\textbf{\ExerciseName~\ExerciseHeaderNB} - \textbf{\ExerciseTitle}\medskip}
+
+\renewcommand{\ExePartHeader}{\medskip\textbf{\ExePartName\ExePartHeaderNB\ExePartHeaderTitle\medskip}}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Assignment 1: Small Project - Building Programs}
+\subsubsection*{EMAT10007 -- Introduction to Computer Programming}
+\subsection*{\Large Assignment 1 -- Building Programs}
+
+\section*{Overview}
+\begin{itemize}
+	\item The objective of Assignment 1 is to submit an interactive Python program that allows the user to:
+	\begin{itemize}
+		\item Encrypt/decrypt messages using a Caesar cipher.
+		\item Input the message to be encrypted/decrypted.
+		\item Specify the rotation used by the Caesar cipher.
+		\item Produce a list of statistics about the messages, such as letter frequency, average word length, etc.
+% 		\item To automate the identification of the rotation used by some encrypted message.
+	\end{itemize}
+	\item Your Python program should be accompanied by a short, 1-2 page report. This should discuss your implementation and any design choices. For example, why you chose to use a specific data structure or how you improved the reusability of your code. 
+ 	\item \textbf{The \textbf{deadline is 15:00 on Friday 15$^{\textbf{th}}$ November.}} You must upload your assignment including the program (.py) and report (.PDF) to \textbf{Blackboard}.
+	\item For this assignment it is required that you submit individual work. You may discuss the creative approaches to solve your assignment with each other, but you must work individually on all of the programming.
+	\textbf{\hl{We will be checking for plagiarism!}}
+\end{itemize}
+
+\section*{Background: The basics of cryptography}
+\begin{itemize}
+	\item A \href{https://en.wikipedia.org/wiki/Caesar_cipher}{Caesar cipher} is a simple, well known cipher used in the encryption of strings. It is a `substitution cipher', meaning that each letter is \emph{substituted} with a corresponding letter in the alphabet at a predefined offset from the input letter's position. The amount of offset is called \emph{rotation}.\\
+	\item The table below shows a Caesar cipher with a rotation value of $13$; a popular special case of the Caesar cipher known as \href{https://www.wikiwand.com/en/ROT13}{ROT13}.
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		\textbf{Index} & {\tt 0} & {\tt 1} & {\tt 2} & {\tt 3} & {\tt 4} & {\tt 5} & {\tt 6} & {\tt 7} & {\tt 8} & {\tt 9} & {\tt 10} & {\tt 11} & {\tt 12} & 13 & ... \\ \hline
+		\textbf{Input} & A & B & C & D & E & F & G & H & I & J & K  & L  & M & N & ... \\ \hline
+		\textbf{Output} & N & O & P & Q & R & S & T & U & V & W & X  & Y  & Z & A & ... \\ \hline
+		\end{tabular}
+	\end{table}
+	\item In this example, the letter ``A'' is replaced by the letter indexed $13$ positions to the right of ``A''; the letter ``N''.
+	\item This particular cipher is only defined for the letters of the alphabet, meaning that punctuation, spaces, and numbers are left unchanged.
+\end{itemize}
+
+\newpage
+
+\begin{Exercise}[title=Encryption and decryption]
+	\Question{Your program should ask for the following information:
+	\begin{itemize}
+		\item The {\tt cipher mode}
+		\begin{itemize}
+		    \item Should it {\tt encrypt} or {\tt decrypt} the message?
+		\end{itemize}
+		\item A {\tt rotation value}
+		\begin{itemize}
+		    \item How far should the cipher shift?
+		    \item This should be a positive integer.
+		\end{itemize}
+		\item A {\tt message}
+		\begin{itemize}
+		    \item The words to be encrypted or decrypted.
+		    \item This should be able to take both single line and multi-line messages.
+		\end{itemize}
+	\end{itemize}}
+	\Question{If no inputs are provided, or the provided input is incorrect, the program should provide instructions to the user before asking again.}
+	\Question{When the {\tt cipher mode} chosen is {\tt encryption} then your program should encrypt the message by the provided shift by passing the {\tt message} and {\tt rotation value} to an {\tt encryption} function as arguments. The program should then print the encrypted message.}
+	\Question{When the {\tt cipher mode} chosen is {\tt decryption} your program should follow the same steps as above, except your program should call a {\tt decryption} function on each message. Note that decryption follows the same process as encryption, only the shift goes the opposite way.}
+	\Question{Numbers, punctuation and spaces should be unchanged.}
+	\Question{All messages (either encrypted or decrypted) should be printed as \textbf{UPPER CASE} only.}
+\end{Exercise}
+
+\begin{Exercise}[title=Analysing messages]
+    \Question{During the execution of your program, you should collect the following data on the plain text (unencrypted English) message:
+	\begin{itemize}
+		\item Total number of words;
+		\item Number of unique words;
+		\item Minimum, maximum, and average word length;
+		\item Most common letter;
+		\item (Up to) The ten most common words and their frequency, e.g., {\tt the~:~4} (i.e., "the" has been found 4 times)
+	\end{itemize}}
+	\Question{After the whole message has been encrypted or decrypted by your program, the program should print out the above statistics.}
+	\Question{The statistics should be based on the whole message; you do not need to print them for each line of the message.}
+\end{Exercise}
+
+\begin{Exercise}[title=Messages from a file]
+    \Question{Modify your program so the user now has a choice between providing an input message or reading a message from a file.}
+    \Question{If the user chose to read from a file, ask the user to provide a {\tt filename}.}
+    \Question{The program should then attempt to open a file with the name given and read in the contents of the file as the {\tt message}.}
+    \Question{If the {\tt filename} provided cannot be found, the program should print an error with explanation and ask again.}
+    \Question{The program should then continue to work as before.}
+\end{Exercise}
+
+\begin{Exercise}[title=Automated decryption]
+	\Question{Modify your program so that if the user has give the {\tt cipher mode} as decryption, the user then has a choice between specifying a {\tt rotation value} or choosing to automatically decrypt the message.}
+	\Question{If automated decryption is chosen, the program should read in a file of common English words (this is provided by us and can be downloaded from BlackBoard).}
+	\Question{The program should then attempt to automate the decryption process by implementing the following algorithm:
+	\begin{enumerate}[label=(\alph*)]
+		\item Iteratively apply the decryption function to the first line of the message, incrementing the rotation by $1$ each time.
+		\item During every iteration, apply the decrypt function and attempt to match words in the decrypted line with words found in the common words list.
+		\item If matches are discovered, then present the line to the reader, and ask if the line has been successfully decrypted:
+		\begin{enumerate}[label=\roman*.]
+			\item If the user answers ``no'', then continue to increment the rotation until the line is successfully decrypted.
+			\item If the user answers ``yes'', then print the rotation for this line, and start again at with the next line, until all the lines in the message have been successfully decrypted.
+		\end{enumerate}
+	\end{enumerate}}
+	\textbf{Note:} The {\tt rotation value} could be different for each line of the message.
+\end{Exercise}
+
+
+\begin{Exercise}[title=(* Optional) Enhancements]
+
+The following section outlines some ideas to extend your program for those students confident with programming and looking to achieve additional marks. \textbf{\underline{This section is strictly optional}}.
+\Question{You may try to improve on the automated decryption process the following ways:
+\begin{itemize}
+	\item Try out every possible rotation value first and sort them according to number of words matched with the dictionary. This should help reduce how many times you need to ask the user if the rotation is correct.
+	\item Research and identify common patterns in the English language. Create a function which attempts to match these in the encrypted input message in order to identify the rotation \emph{without} using the common words dictionary.
+\end{itemize}}
+\Question{Add an alternative mode where the user can input {\tt random} instead of a {\tt rotation value}. This should then result in the encryption/decryption functionality described:
+
+\textbf{Encryption:}
+\begin{enumerate}[label=(\alph*)]
+	\item For each word in the message, you should select a rotation value at random, and then apply the rotation to the word.
+	\item You should then append a random letter to the beginning of the encrypted word, and the letter {\tt rotation value} positions down the alphabet to the end of the word. Example program input and output might be:
+	
+	\vspace{0.5em}
+	{\tt Please enter a message: "Hello world"}\\
+	{\tt Output: AURYYBN EASVPHI}
+	\vspace{0.5em}
+	
+	You may be able to work out that the first word uses a rotation of $13$ (A $\rightarrow$ N) and the second word uses a rotation of $4$ (E $\rightarrow$ I).
+\end{enumerate}
+
+\textbf{Decryption:} Given that we now know the new encryption scheme, you should implement the decryption functionality for input encrypted using this new scheme.}\\
+
+
+
+\textbf{Important:} If you implement any enhancements to your program, you \textbf{must} comment them using the following format:
+
+\vspace{0.5em}
+{\tt \#!\# Comment here ...}
+\vspace{0.5em}
+
+as this will allow the TAs marking your project to easily locate your enhancements. An example comment might start like this:
+
+\vspace{0.5em}
+{\tt \#!\# Here I create a set of common patterns in English to ...}
+\vspace{0.5em}
+
+In the report, discussions related to your enhancements should go in a separate section.\\
+
+\end{Exercise}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{Helpful hints and suggestions}
+\begin{itemize}
+    \item It is crucial that you complete all of the exercise sheets first - they have been specifically designed to prepare you for this assignment.
+	\item You should spend plenty of time planning out how the flow of your program might look \textbf{before} you start programming. Look back at previous exercise sheets to see how to approach larger problems by breaking them down into smaller ones.
+	\item Remember to think about the \textbf{readability} and \textbf{reusability} of your code. Some question you might ask yourself:
+	\begin{itemize}
+		\item Have I named things sensibly? Could someone pick up my code and understand it?
+		\item Am I repeating lots of code? Can I reuse any?
+	\end{itemize}
+	\item \textbf{Comment your code!} Comments are something we haven't discussed much up to this point, however they are crucial for many reasons:
+	\begin{itemize}
+		\item They help other readers to understand what your code is doing.
+		\item They help \emph{you} remember what your code is doing, when you come back to it weeks/months/years later. The whole point of writing code is that it can be reused many times, so to make it reusable, add comments.
+		\item To help your TA assess your understanding of the problem you are trying to solve, and to assess how well your solution solves it. If you use a data structure to implement some functionality, explain it in the comments.
+	\end{itemize}
+	Short comments are great to summarise the next several lines of code by giving a high-level overview. For longer, more detailed comments (likely useful in functions and for Part 4), by enclosing them in three speech marks {\tt """} either side. E.g.
+	
+	\vspace{0.5em}
+	{\tt def SomeFunction(SomeArgument):}\\
+	{\tt \hspace*{2em}"""}\\
+	{\tt \hspace*{2em}This function does ...}\\
+	{\tt \hspace*{2em}....and it does this....}\\
+	{\tt \hspace*{2em}"""}
+	\vspace{0.5em}
+	
+	\item We mark for the following points:
+	\begin{itemize}
+	    \item Functionality: The more of the functionality described above you implement, the higher the mark.
+	    \item Types: Proper use of data types and data structures. 
+	    \item Comments: Appropriate and useful comments. 
+	    \item Naming: Appropriate variable and function names (remember we want you to use CamelCase)
+	    \item Report: Informative report, which explains your thought process 
+	    \item Working code: Does the code do what it is supposed to? Is it robust, i.e., does it deal correctly with wrong inputs (user/program interaction)
+	\end{itemize}
+	
+	\item Finally, don't forget to ask for help! You will be able to ask your TA for help and advice during the lab sessions. There are also drop-ins on Mondays at 3pm in MVB 1.15 and the Support Forum on Blackboard.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,181 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage[lastexercise]{exercise}
+
+\setlength{\parindent}{0cm}
+
+\renewcommand{\ExerciseHeader}{\large\textbf{\ExerciseName~\ExerciseHeaderNB} - \textbf{\ExerciseTitle}\medskip}
+
+\renewcommand{\ExePartHeader}{\medskip\textbf{\ExePartName\ExePartHeaderNB\ExePartHeaderTitle\medskip}}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Exercises -- Week 1: Introduction to Python}
+\subsubsection*{EMAT10007 -- Introduction to Computer Programming}
+\subsection*{\Large Exercises -- Week 1. Introduction to Python}
+
+\subsection*{Getting Started}
+All lab sessions will be in MVB 2.11. These computers have a Linux operating system and so you need to use the remote desktop for Windows. Here is how:
+\begin{itemize}
+    \item Log in to the computer using your university credentials.
+    \item Move your mouse to the top left corner of the desktop, or press the windows key on your keyboard.
+    \item In the search field that appears, type `remote'.
+    \item Click on Remote Desktop - it has an icon with a single monitor.
+    \item Click on Connect.
+    \item Fill in the following properties:
+    \begin{itemize}
+        \item For protocol choose RDP.
+        \item For Host, type `studentremotedesktop.bris.ac.uk'.
+        \item Check the RDP options: scaling box.
+        \item Username: XX12344 (your university username)
+        \item Domain: UoB
+        \item Width: 1920
+        \item Height: 1000
+    \end{itemize}
+    \item Enter your password.
+\end{itemize}
+You should now be logged into the Windows Remote Desktop and can open IDLE 3 by finding it through the start menu.
+
+\textbf{Note: } Both Python 2 and Python 3 are on the computers. You need to make sure you choose IDLE 3.
+
+\begin{Exercise}[title=Variables]
+	\Question{Variables can be assigned values and (may) change during the execution of your program. In many languages, to assign a value to a variable, we just use a single ``equals'' sign: {\tt =}. Try:
+		
+		\vspace{0.5em}
+		{\tt x = 10}
+		
+		{\tt y = 5}
+		\vspace{0.5em}
+	
+	What is returned now when you call {\tt x} and {\tt y}?}
+	\Question{What happens if you now assign {\tt x = 4}?}
+	\Question{Variable names should start with a letter, and may contain letters or numbers. Be aware that some {\tt keywords} are reserved by the Python language and cannot be used as variable names.Try the following:
+
+        \vspace{0.5em}
+		{\tt True = 1}
+		\vspace{0.5em}
+		
+		What happens here, and why? Now try:
+		
+		\vspace{0.5em}
+		{\tt true = 1}
+		\vspace{0.5em}
+		
+	\textbf{Note:} Python is case-sensitive, so be careful when naming and using your variables!
+	
+	For a full list of keywords reserved by Python, enter the following:
+		
+		\vspace{0.5em}
+		{\tt import keyword}
+		
+		{\tt keyword.kwlist}
+		\vspace{0.5em}}
+		
+	\Question{(*) We can also assign multiple variables on the same line.
+	
+	    \vspace{0.5em}
+		{\tt x, y  = 5, 10}
+		\vspace{0.5em}
+	
+	How would you extend this to also assign 15 to the variable {\tt z}?
+	}
+\end{Exercise}
+
+\begin{Exercise}[title=Numbers and Operators]
+
+\ExeText{As discussed in the lectures IDLE can be used as a calculator. You can input operations, assign values to variables, and store the results of operations for use in additional calculations.}
+
+	\Question{Create two variables called ``A'' and ``B'', and assign a value of your choice to each of these variables.}
+	\Question{To calculate the addition of {\tt A} and {\tt B}, enter {\tt A+B}.}
+	\Question{Now enter {\tt A*(A+B)}.}
+	\Question{What happens if you enter {\tt A*A+B} instead? Python follows the same ordering of mathematical operations as any other calculator.}
+	\Question{Set {\tt A = 10} and {\tt B = 3}. Now enter {\tt A/B} to calculate the division of A} and B. What happens if you enter {\tt A//B} instead?
+	\Question{Now try {\tt A\%B}.
+	
+	\textbf{Note:} {\tt \%} is the modulus operator, and calculates the remainder of a division.}
+	\Question{(*) Can you calculate the circumference of a circle with a 5cm radius? How about a 12.5cm radius?
+	
+	\textbf{Hint:} Recall in the lectures we used the {\tt math} module to gain extra functionality. It also gives us constant values such as {\tt math.e}.}
+\end{Exercise}
+
+\begin{Exercise}[title=Booleans]
+	\Question{Create two variables called ``A'' and ``B'', and assign some numeric values to each of them.}
+    \Question{Print the results of:
+		\begin{itemize}
+		    \item {\tt A < B}
+		    \item {\tt A > B}
+		    \item {\tt A == B} \emph{(Note: Two equals signs)}
+		\end{itemize}
+
+		You can also use {\tt<=} for $\leq$ and {\tt>=} for $\geq$ comparisons.}
+	\Question{What happens if you do use {\tt A=B} with only a single equals sign?}
+	\Question{What happens if you write {\tt not} in front of one of the lines above?}
+	\Question{You can also set {\tt A} and {\tt B} to be Boolean truth values themselves, such as:
+		{\tt A = True} and {\tt B = False}.
+		\item Now try some logical (Boolean) operations such as:
+		\begin{itemize}
+		    \item {\tt A and B}
+		    \item {\tt A or B}
+		    \item {\tt A and not B}
+		\end{itemize}}
+	\Question{(*) You can also use the {\tt bool()} function to evaluate any value as either {\tt True} or {\tt False}. What numbers evaluate as {\tt True}? Do any evaluate as {\tt False}?}
+\end{Exercise}
+
+\begin{Exercise}[title=Strings]
+    \Question{Create two variables called ``A'' and ``B''.}
+	\Question{Assign {\tt A} to ``Hello'' and {\tt B} to ``world''. The quotation marks indicate that these are strings. You can check this with {\tt type(A)} and {\tt type(B)}.}
+	\Question{Join these variables together by \emph{adding} {\tt A} and {\tt B}: {\tt A + B}
+	\Question{What happens when you try {\tt A - B}? 
+	
+	\textbf{Note:} Not all operators are defined for all variable types.}
+	\Question{Notice how the string is missing a space between ``Hello'' and ``world''. Combine {\tt A}} and {\tt B} with a new space `` '' in the middle, and assign this new string to a new variable {\tt C}.}
+	\Question{Print the length of this new string by entering {\tt len(C)}.}
+	\Question{{\tt len()} is a built-in function in Python which simply returns the \emph{length} of something. What types of variables does {\tt len()} work on? 
+	
+	\vspace{0.25em}
+	\textbf{Hint:} Look at the Python 3 Documentation: \url{https://docs.python.org/3/library/functions.html}.}
+	\Question{(*) You can also check if a certain phrase or character is present in a string by using the keywords {\tt in} or {\tt not in}, which return a boolean.
+	
+	Using the string {\tt C} from above, try:
+	\begin{itemize}
+	    \item {\tt "w" in C}
+	    \item {\tt "hello" in C}
+	    \item {\tt "Hello" in C}
+	    \item {\tt "world" not in C}
+	    \item {\tt A in C}
+	\end{itemize}}
+\end{Exercise}
+
+\begin{Exercise}[title=Importing Modules]
+
+    In the lectures we imported the {\tt math} module to extend the range of mathematical functions available. There are many other useful modules we can use, in this exercise we will look at the {\tt random} module.
+    \Question{Do {\tt import random} and use {\tt dir(random)} to find out what has been added.}
+    \Question{Can you find a function that would replicate a 6-sided dice throw?
+    
+    \textbf{Hint:} Remember you can use {\tt help(random)} to get a description of all the functions.}
+    \vspace{-\baselineskip}
+    \Question{How would you change this for a 12-sided dice? And a 20-sided one?}
+    \Question{(*) Python has a lot of built-in modules - do {\tt help(`modules')} to see just how many. For now have a look at {\tt file}, {\tt statistics}, {\tt cmath} and {\tt re}. Find them in the Python 3 Documentation (\url{https://docs.python.org/3/library/}) and think about how they could be useful. Try some of them out - ask your TA for ideas and pointers to tutorials.
+    
+    \textbf{Hint:} To start with I recommend investigating regular expressions in the {\tt re} module with the tutorial here: \url{https://www.w3schools.com/python/python_regex.asp}}
+\end{Exercise}
+
+\subsection*{Checklist}
+\begin{itemize}
+    \item Meet your TA - they will be mentoring you throughout the course, and will be there to answer question and provide feedback along the way.
+	\item Check that you understand the basics: variables, different types of variables (numbers (integers, floats), Booleans, strings), the different built-in operators, and how these work with both numbers and strings.
+	\item Practice with using IDLE shell as a useful calculator with access to some powerful abilities provided in ``modules''.
+\end{itemize}
+
+\subsection*{Additional resource}
+\begin{itemize}
+    \item Check the `Additional Resources' folder on Blackboard, where you will find video tutorials on how to download and install Python 3 and using IDLE. Keep an eye on this folder as it'll be regularly updated with tutorials and guides.
+	\item Of course, there are many online tutorials for Python 3, so if you're wondering what more you can do with either of these, please do search online or ask your TAs for pointers.
+\end{itemize}
+\end{document}

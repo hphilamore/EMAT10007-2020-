@@ -1,0 +1,111 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hea
+\documentclass[12pt]{report}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Exercises - Week 2: Solving Problems}
+\subsection*{Introduction to Computer Programming}
+\subsection*{Exercises - Week 2. Solving Problems}
+\begin{enumerate}
+\item Review Monday's lecture
+\begin{enumerate}
+\item Watch the accompanying YouTube videos and run the Scratch demos online.
+\begin{itemize}
+\item Videos\\
+\url{http://goo.gl/AWh61V}
+\item Scratch demos\\
+\url{http://scratch.mit.edu/studios/520908/}
+\end{itemize}
+\end{enumerate}
+\item Global vs local variables
+\begin{enumerate}
+\item Write a program that shows two cars driving back and forth on a road. You can make the road by clicking on "Stage" in the sprite area and then on "Backgrounds" near the script area. One car drives faster than the speed limit, the other drives slower. Use the following three variables:
+\begin{itemize}
+\item SpeedLimit: speed limit for the road.
+\item Speed: speed of the first car. Set the speed lower than the speed limit (Speed=SpeedLimit-X with X being a number of your choice).
+\item Speed: speed of the second car. Set the speed higher than the speed limit (Speed=SpeedLimit+X with X being a number of your choice).
+\end{itemize}
+Choose carefully if the variables should be global or local. Make sure the values of the variables are displayed in the stage.
+\item Change the value of the speed limit, does this change the behaviour of both cars? If not, make sure you are in fact using all your variables in the scripts.
+\end{enumerate}
+If you have time at the end of class: make cars drive on a circular track.
+
+\item Operators
+\begin{enumerate}
+\item Numbers
+\begin{itemize}
+\item Create two variables called ``A'' and ``B''.
+\item When the green flag is pressed, make sure you initialise the values of the variables to numbers of your choice.
+\item Make the cat print out the result of $A+B$.
+\item Make the cat print out the result of $A*(A+B)$.
+\item Try the same but with ``A'' being a random number between 1 and 10.
+\item Set the variable ``A'' to $A*A$ every time the space key is pressed. Have the cat print out $A$. What happens when you press the key multiple times?
+\end{itemize}
+\item Text (otherwise known as strings)
+\begin{itemize}
+\item Create two variables called ``A'' and ``B''.
+\item When the green flag is pressed, initialise the values of the variables to the text ``Hello'' and ``World''.
+\item Make the cat print out the result of joining text $B$ to the end of text $A$ (join ``A'' and ``B'').
+\item Make the cat print out the length of this new text.
+\end{itemize}
+\item Booleans
+\begin{itemize}
+\item Create two variables called ``A'' and ``B''.
+\item When the green flag is pressed, make sure you initialise the values of the variables to numbers of your choice.
+\item Make the cat print out the result of $A<B$.
+\item Is there a second way you could do the same thing? Try to print $\textrm{not}(A>B)$. Why does this work?
+\end{itemize}
+\end{enumerate}
+
+\item Conditional Statements
+\begin{enumerate}
+\item If-then-else
+\begin{itemize}
+\item Create one variable called ``Limit'' set between 1 and 10.
+\item When the green flag is clicked, choose a random number and check if it is larger than the limit. If it is, have the cat say ``You win!''. Otherwise, have it say ``You lose!''.
+\end{itemize}
+\end{enumerate}
+
+\item Loops
+\begin{enumerate}
+\item forever \& repeat
+\begin{itemize}
+\item Create two variables called ``A'' and ``B''.
+\item Sum up all the consecutive integers between ``A'' and ``B''. Try coding the loop using variously: a ``forever'' (with an ``if'' inside); a ``repeat'' (a given variable number of times); ``repeat until''.
+\end{itemize}
+\end{enumerate}
+
+\item Brain teaser (optional)
+
+\begin{enumerate}
+\item Multiples of 3 and 5
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.
+
+\item Largest palindrome product:
+A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99. Find the largest palindrome made from the product of two 3-digit numbers.
+
+\item Check out Project Euler for more brain teasers: https://projecteuler.net
+\end{enumerate}
+
+Did you make a project you'd like to share? Email sabine.hauert@bristol.ac.uk with your scratch {\tt .sb2} file or the link to your project if you decide to upload it to the MIT Scratch sharing site. We'll add it to the class studio (\url{http://scratch.mit.edu/studios/520933/}) and share through social media $\#$EMAT10007.
+\end{enumerate}
+
+\subsection*{Checklist}
+\begin{itemize}
+  \item Understand the following concepts:
+  		\begin {itemize}
+        \item Variables
+        \item Operators
+        \item Iterations
+        \item Conditional Statements
+        \end{itemize}
+  \item Predict the output of a program that uses each of these concepts.
+  \item Write a program that uses each of these concepts.
+  \item Solve simple brain teasers using a program.
+\end{itemize}
+\end{document}

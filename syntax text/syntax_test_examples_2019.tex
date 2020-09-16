@@ -1,0 +1,642 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header
+\documentclass[11pt]{report}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{tasks}
+\usepackage[lastexercise]{exercise}
+
+\setlength{\parindent}{0cm}
+
+\renewcommand{\ExerciseHeader}{\large\textbf{\ExerciseTitle}\medskip}
+
+\renewcommand{\ExePartHeader}{\medskip\textbf{\ExePartName\ExePartHeaderNB\ExePartHeaderTitle\medskip}}
+
+\NewTasks[style=multiplechoice]{choices}[\choice](4)
+\NewTasks[style=multiplechoice]{choices_short}[\choice](3)
+\NewTasks[style=multiplechoice]{choices_single}[\choice](1)
+\newcommand*\correct{\PrintSolutionsTF{\checkedchoicebox}{\choicebox}}
+
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Class Test: Syntax Test}
+\subsubsection*{EMAT10007 -- Introduction to Computer Programming}
+\subsection*{\Large Syntax Test - Examples}
+
+\subsection*{Overview}
+\begin{itemize}
+    \item The lab session on \textbf{Friday 1st November} will be the ``Syntax Test'' class test. You will be tested on your understanding of the core principles of programming, with emphasis on the specific syntax used by the Python programming language.
+
+	\item The test will be multiple choice but will only have \textbf{one} correct answer.
+
+    \item If you are wondering ``where are the answers to the exercises?'' - try them out! The best way to revise for this test is to work through the examples and modifying them until they work or give the expected output.
+    
+    \item Note blank lines are still numbered in the coding snippets.
+
+    \item Please use the Support Forums to ask questions.
+\end{itemize}
+
+\begin{Exercise}[title=Practice Exercises]
+    \Question{Which line causes an error?
+    
+    \vspace{1em}
+    {\tt 1CatName = "Whiskers"}\\
+    {\tt CatName2 = "Felix"}\\
+    
+    {\tt \# Print the names of two cats}\\
+    {\tt print("I have two cats named ", CatName1, " and ", CatName2)}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice Line 1
+        \choice Line 2
+        \choice Line 4
+        \choice Line 5
+    \end{choices}
+    }
+    \Question{Which line causes an error?
+    
+    \vspace{1em}
+    {\tt Counter = 0}\\
+    {\tt While Counter < 10:}\\
+    {\tt \hspace*{2em}print(Counter)}\\
+    {\tt \hspace*{2em}Counter += 1}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice Line 1
+        \choice Line 2
+        \choice Line 3
+        \choice Line 4
+    \end{choices}
+    }
+    \Question{Which line causes an error?
+    
+    \vspace{1em}
+    {\tt A = 10}\\
+    {\tt B = 5}\\
+    {\tt C = ((A + 2) * (B - 2) / 5}\\
+    {\tt print(C)}
+    \vspace{1em}
+
+    \begin{choices}
+        \choice Line 1
+        \choice Line 2
+        \choice Line 3
+        \choice Line 4
+    \end{choices}
+    }
+    
+    \Question{Which line causes an error?
+    
+    \vspace{1em}
+    {\tt Ask for a word}\\
+    {\tt Word = input("Enter a word:")}\\
+    
+    {\tt \# Print the length of the word}\\
+    {\tt print(len(Word))}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice Line 1
+        \choice Line 2
+        \choice Line 4
+        \choice Line 5
+    \end{choices}
+    }
+    
+    \Question{Which line causes an error?
+    
+    \vspace{1em}
+    {\tt \# Ask for a number}\\
+    {\tt Number = input("Enter a number:")}\\
+    
+    {\tt \# Is the number bigger than 10?}\\
+    {\tt print(Number > 10)}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice Line 1
+        \choice Line 2
+        \choice Line 4
+        \choice Line 5
+    \end{choices}
+    }
+    \Question{Which line causes an error?
+    
+    \vspace{1em}
+    {\tt Number = 5}\\
+    {\tt if (Number \% 2) == 0}:\\
+    {\tt \hspace*{2em} \# Print the number is even}\\
+    {\tt \hspace*{2em} print("The number is even.")}\\
+    {\tt else:}\\
+    {\tt \hspace*{2em} \# Print the number is odd}\\
+    {\tt print("The number is odd.")}
+    \vspace{1em}
+    
+    \begin{choices_short}
+        \choice Line 2
+        \choice Line 3
+        \choice Line 4
+        \choice Line 5
+        \choice Line 6
+        \choice Line 7
+    \end{choices_short}
+    }
+    \Question{What type of error is caused by the following code?
+    
+    \vspace{1em}
+    {\tt A = 3}\\
+    {\tt B = 4}\\
+    {\tt C = math.sqrt((A ** 2) + (B ** 2))}\\
+    {\tt print(C)}
+    \vspace{1em}
+    
+    \begin{choices_short}
+        \choice {\tt SyntaxError}
+        \choice {\tt NameError}
+        \choice {\tt TypeError}
+    \end{choices_short}
+    }
+    
+    \Question{Consider the following:
+    
+    \vspace{1em}
+    {\tt \# Print out all the multiples of three up to the limit}\\
+    {\tt for Value in range(Limit):}\\
+    {\tt \hspace*{2em}if (Value \% 3) == 0:}\\
+    {\tt \hspace*{4em} print(Value)}
+    \vspace{1em}
+    
+    Which line causes an error?
+    
+    \begin{choices}
+        \choice Line 1
+        \choice Line 2
+        \choice Line 3
+        \choice Line 4
+    \end{choices}
+    
+    
+    What type of error is thrown?
+    
+    \begin{choices_short}
+        \choice {\tt SyntaxError}
+        \choice {\tt NameError}
+        \choice {\tt TypeError}
+    \end{choices_short}
+    }
+    
+    \Question{What is the error in the following code?
+    
+    \vspace{1em}
+    {\tt OrigTrilogy = \{"A New Hope", "The Empire Strikes Back", "Return of the Jedi"\}}\\
+    {\tt print(OrigTrilogy[-1])}
+    \vspace{1em}
+    
+    \begin{choices_single}
+        \choice {\tt IndexError} - Index out of range for the list
+        \choice {\tt TypeError} - Tuples are immutable
+        \choice {\tt KeyError} - Incorrect key for the dictionary
+        \choice {\tt TypeError} - Indexes cannot be used with sets
+    \end{choices_single}
+    }
+    
+    \Question{What is the error in the following code?
+    
+    \vspace{1em}
+    {\tt ShoppingItems = ["Bread", "Cookies", "Jam", "Apples"]}\\
+    {\tt print(ShoppingItems[4])}
+    \vspace{1em}
+    
+    \begin{choices_single}
+        \choice {\tt IndexError} - Index out of range for the list
+        \choice {\tt TypeError} - Tuples are immutable
+        \choice {\tt KeyError} - Incorrect key for the dictionary
+        \choice {\tt TypeError} - Indexes cannot be used with sets
+    \end{choices_single}
+    }
+    
+    \Question{What is the error in the following code?
+    
+    \vspace{1em}
+    {\tt LuckyNumbers = (3, 7, 12, 8)}\\
+    {\tt LuckyNumbers[0] = 13}
+    \vspace{1em}
+    
+    \begin{choices_single}
+        \choice {\tt IndexError} - Index out of range for the list
+        \choice {\tt TypeError} - Tuples are immutable
+        \choice {\tt KeyError} - Incorrect key for the dictionary
+        \choice {\tt TypeError} - Indexes cannot be used with sets
+    \end{choices_single}
+    }
+    
+    \Question{Select the correct output to the following:
+    
+    \vspace{1em}
+    {\tt A = True}\\
+    {\tt B = False}\\
+    {\tt C = A and B}\\
+    {\tt print(C)}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice {\tt true}
+        \choice {\tt False}
+        \choice {\tt True}
+        \choice {\tt 0}
+    \end{choices}
+    }
+    
+    \Question{Select the correct output to the following:
+    
+    \vspace{1em}
+    {\tt A = True}\\
+    {\tt B = False}\\
+    {\tt C = A or B}\\
+    {\tt print(not C)}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice {\tt true}
+        \choice {\tt False}
+        \choice {\tt True}
+        \choice {\tt 0}
+    \end{choices}
+    }
+    
+    \Question{Select the correct output to the following:
+    
+    \vspace{1em}
+    {\tt A = 5}\\
+    {\tt B = 2 * A}\\
+    {\tt C = A}\\
+    {\tt print(C - B)}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice {\tt -A}
+        \choice {\tt False}
+        \choice {\tt -10}
+        \choice {\tt -5}
+    \end{choices}
+    }
+    
+    \Question{Select the correct output to the following:
+    
+    \vspace{1em}
+    {\tt A, B = 5, 10}\\
+    {\tt C = A * 2}\\
+    {\tt print(C == B)}
+    \vspace{1em}
+    
+    \begin{choices}
+    \choice {\tt True}
+    \choice {\tt False}
+    \choice {\tt 5}
+    \choice {\tt 10}
+    \end{choices}    
+    }
+    
+    \Question{Select the correct output to the following:
+    
+    \vspace{1em}
+    {\tt A = 12}\\
+    {\tt C = 7}\\
+    {\tt A = B = C}\\
+    {\tt print(A, B)}
+    \vspace{1em}
+    
+    \begin{choices}
+    \choice {\tt 7 7}
+    \choice {\tt C C}
+    \choice {\tt 12 12}
+    \choice {\tt 12 7}
+    \end{choices}    
+    }
+    \Question{Select the missing operators:
+    
+    \vspace{1em}
+    {\tt NumberList = [10, 12, 15, 20, 24, 27, 30, 35]}\\
+    {\tt Total = 0}\\
+    
+    {\tt for Number in NumberList:}\\
+    {\tt \hspace*{2em} if (Number \% 10) == 0:}\\
+    {\tt \hspace*{4em} Total <?> 1}\\
+    {\tt \hspace*{2em} else:}\\
+    {\tt \hspace*{4em} Total <?> 1}\\
+    {\tt print(Total)}\\
+    
+    {\tt -----}\\
+    {\tt Output:}\\
+    
+    {\tt 2}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice {\tt -=, -=}
+        \choice {\tt +=, +=}
+        \choice {\tt +=, -=}
+        \choice {\tt -=, +=}
+    \end{choices}
+    }
+    
+    \Question{At the end of each code snippet, what is the {\tt type} of {\tt A}?}
+    
+    \vspace{1em}
+    {\tt A = "22"}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice {\tt string}
+        \choice {\tt int}
+        \choice {\tt bool}
+        \choice {\tt float}
+    \end{choices}
+    
+    \vspace{1em}
+    {\tt B = 10}\\
+    {\tt A = B / 2}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice {\tt bool}
+        \choice {\tt int}
+        \choice {\tt complex}
+        \choice {\tt float}
+    \end{choices}
+    
+    \vspace{1em}
+    {\tt C = 6}\\
+    {\tt B = 10}\\
+    {\tt A = C != B}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice {\tt string}
+        \choice {\tt int}
+        \choice {\tt bool}
+        \choice {\tt complex}
+    \end{choices}
+    
+    \vspace{1em}
+    {\tt C = 1 - 3j}\\
+    {\tt B = 2}\\
+    {\tt A = C ** B}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice {\tt complex}
+        \choice {\tt int}
+        \choice {\tt bool}
+        \choice {\tt float}
+    \end{choices}
+    
+    \vspace{1em}
+    {\tt A = "22"}\\
+    {\tt A = float(A)}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice {\tt string}
+        \choice {\tt int}
+        \choice {\tt complex}
+        \choice {\tt float}
+    \end{choices}
+    
+        \vspace{1em}
+    {\tt B = 2.5}\\
+    {\tt A = 2 / int(B)}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice {\tt string}
+        \choice {\tt int}
+        \choice {\tt bool}
+        \choice {\tt float}
+    \end{choices}
+    
+    \Question{Select the correct index:
+    
+    \vspace{1em}
+    {\tt StarWarsYears = [1977, 1980, 1983, 1999, 2002, 2005, 2015, 2017, 2019]}\\
+    {\tt print("The Empire Strikes Back came out in ", StarWarsYears[<?>])}\\
+    
+    {\tt -----}\\
+    {\tt Output:}\\
+    
+    {\tt The Empire Strikes Back came out in 1980}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice 0
+        \choice 1
+        \choice 2
+        \choice 4
+        \choice 5
+        \choice 6
+        \choice 7
+        \choice 8
+    \end{choices}
+    
+    \vspace{1em}
+    {\tt EpisodeYears = \{"IV":1977, "V": 1980, "I": 1983\}}\\
+    {\tt print("A New Hope came out in ", EpisodeYears[<?>])}\\
+    
+    {\tt -----}\\
+    {\tt Output:}\\
+    
+    {\tt A New Hope came out in 1977}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice {\tt 4}
+        \choice {\tt "IV"}
+        \choice {\tt "4"}
+        \choice {\tt IV}
+    \end{choices}
+    }
+    
+    \Question{Select the correct output:
+    
+    \vspace{1em}
+    {\tt ShoppingItems = ["Bread", "Cookies", "Jam", "Salad", "Apples"]}\\
+    {\tt ShoppingItems[-2] = ShoppingItems[1]}\\
+    {\tt print(ShoppingItems)}
+    \vspace{1em}
+    
+    \begin{choices_single}
+        \choice {\tt ["Bread", "Salad", "Jam", "Cookies", "Apples"]}
+        \choice {\tt ["Bread", "Cookies", "Jam", "Cookies", "Apples"]}
+        \choice {\tt ["Bread", "Bread", "Jam", "Cookies", "Apples"]}
+        \choice {\tt ["Bread", "Cookies", "Jam", "Bread", "Apples"]}
+    \end{choices_single}
+    }
+    
+    \Question{Select the correct output:
+    
+    \vspace{1em}
+    {\tt Word = "encouragement"}\\
+    {\tt Total = 0}
+    {\tt for Letter in Word:}\\
+    {\tt \hspace*{2em} if Letter != "e":}\\
+    {\tt \hspace*{4em} Total += 1}\\
+    {\tt \hspace*{2em} elif Letter == "g":}\\
+    {\tt \hspace*{4em} Total -= 1}\\
+    {\tt print(Total)}\\
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice {\tt 9}
+        \choice {\tt 2}
+        \choice {\tt 3}
+        \choice {\tt 10}
+    \end{choices}
+    }
+    
+    \Question{Select the correct output:
+    
+    \vspace{1em}
+    {\tt NumberList = []}\\
+    {\tt for Number in range(1, 6):}\\
+    {\tt \hspace*{2em} NumberList.append(Number ** 3)}\\
+    {\tt print(NumberList)}\\
+    \vspace{1em}
+    
+    \begin{choices_single}
+        \choice {\tt [0, 1, 8, 27, 64]}
+        \choice {\tt [0, 1, 2, 3, 4, 5]}
+        \choice {\tt [1, 2, 3, 4, 5]}
+        \choice {\tt [1, 8, 27, 64, 125]}
+    \end{choices_single}
+    }
+    
+    \Question{Select the correct output:
+    
+    \vspace{1em}
+    {\tt NumberList = []}\\
+    {\tt for Number in range(12):}\\
+    {\tt \hspace*{2em} NumberList.append(Number // 2)}\\
+    {\tt print(NumberList.pop())}\\
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice {\tt 5.5}
+        \choice {\tt 6.5}
+        \choice {\tt 5}
+        \choice {\tt 6}
+    \end{choices}
+    }
+    
+    \Question{Select the missing functions:
+    
+    \vspace{1em}
+    {\tt WordList = []}\\
+    {\tt Sentence = "It was a nice day."}\\
+    
+    {\tt \# Add each word from the sentence into a list}\\
+    {\tt for Word in Sentence.<?>(" "):}\\
+    {\tt \hspace*{2em} WordList.<?>(Word)}\\
+    {\tt print(WordList)}\\
+    
+    {\tt -----}\\
+    {\tt Output: }\\
+    
+    {\tt ["It", "was", "a", "nice", "day."]}
+    \vspace{1em}
+    
+    \begin{choices}
+        \choice {\tt separate, add}
+        \choice {\tt split, add}
+        \choice {\tt split, append}
+        \choice {\tt separate, append}
+    \end{choices}
+    }
+    \Question{Select the missing function and values:
+    
+    \vspace{1em}
+    {\tt ProduceStock = \{"Apples":5, "Bananas": 2, "Oranges": 10, "Pears": 4\}}\\
+    {\tt OrderList = []}\\
+    
+    {\tt \# Print to order more of an item if low stock}\\
+    {\tt for Item, Amount in ProduceStock.<?>():}\\
+    {\tt \hspace*{2em} if Amount < <?>:}\\
+    {\tt \hspace*{4em} OrderList.append(<?>)}\\
+    {\tt print("Order more: ", OrderList)}
+    
+    {\tt -----}\\
+    {\tt Output: }\\
+    
+    {\tt Order more: ["Bananas", "Pears"]}\\
+    \vspace{1em}
+
+    \begin{choices_short}
+        \choice {\tt keys, 5, Item}
+        \choice {\tt items, 4, Amount}
+        \choice {\tt items, 5, Item}
+        \choice {\tt keys, 4, Amount}
+        \choice {\tt keys, 4, Item}
+        \choice {\tt items, 5, Amount}
+    \end{choices_short}
+    }
+    
+    \Question{Complete the following code:
+    
+    \vspace{1em}
+    {\tt ProduceStock = \{"Apples":5, "Bananas": 2, "Oranges": 0, "Pears": 4\}}\\
+    
+    {\tt \# Do we have item in stock?}\\
+    {\tt RequestedItem = input("Which item would you like?")}\\
+    
+    {\tt if RequestedItem <?> ProduceStock:}\\
+    {\tt \hspace*{2em} if ProduceStock[RequestedItem] <?> 0:}\\
+    {\tt \hspace*{4em} print("Yes we have your item")}\\
+    {\tt \hspace*{2em} else:}\\
+    {\tt \hspace*{4em} print("Sorry, we have run out of your item")}
+    
+    \vspace{1em}
+
+    \begin{choices}
+        \choice {\tt ==, in}
+        \choice {\tt not, ==}
+        \choice {\tt in, !=}
+        \choice {\tt ==, !=}
+    \end{choices}
+    }
+    
+    \Question{Complete the following code:
+    
+    \vspace{1em}
+    {\tt ProduceStock = \{"Apples":5, "Bananas": 2, "Oranges": 10, "Pears": 4\}}\\
+    
+    {\tt \# Do we sell an item?}\\
+    {\tt RequestedItem = input("Which item would you like?")}\\
+    
+    {\tt \# Add the item to the dictionary}\\
+    {\tt if RequestedItem <?> ProduceStock:}\\
+    {\tt \hspace*{2em} print("Sorry we do not currently sell that item")}\\
+    {\tt \hspace*{2em} <?>}\\
+    {\tt else:}\\
+    {\tt \hspace*{2em} print("Yes, we sell that item.")}
+    
+    \vspace{1em}
+
+    \begin{choices_single}
+        \choice {\tt ==, ProduceStock.append(RequestedItem)}
+        \choice {\tt !=, ProduceStock[RequestedItem] = 0}
+        \choice {\tt in, ProduceStock + RequestedItem}
+        \choice {\tt not in, ProduceStock[RequestedItem] = 0}
+        \choice {\tt not in, ProduceStock.append(RequestedItem)}
+        \choice {\tt in, ProduceStock + RequestedItem}
+    \end{choices_single}
+    }
+    
+\end{Exercise}
+
+\end{document}
