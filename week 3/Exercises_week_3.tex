@@ -22,6 +22,7 @@
 \subsubsection*{EMAT10007 -- Introduction to Computer Programming}
 \subsection*{\Large Exercises -- Week 3. Loops and Data Structures}
 
+\subsection*{\Large Part 1. Loops}
 To complete this week's exercises you will also need to download the {\tt SumFirstTenIntegers.py} and {\tt HowManySquares.py} files from Blackboard.
 
 \begin{Exercise}[title=For Loops]
@@ -43,7 +44,7 @@ To complete this week's exercises you will also need to download the {\tt SumFir
 	Why do we use the value 11 here? What are the values of the range?
 	}
 	\Question{In Q\ref{Q:loopstring} we used the string {\tt Words} as the loop iterator. In the previous question we also saw that you can use the function {\tt range()} as a loop iterator. This is a very useful and important function in Python. Call {\tt help()} on {\tt range()} to see how it works. What will be returned by calling {\tt range(1, 11, 2)}?}
-	\Question{Can you write a loop which now prints both each letter and it's position in the string {\tt Words}?
+	\Question{Can you write a loop which now prints both each letter and its position in the string {\tt Words}?
 	
 	\textbf{Hint:} Recall the {\tt len()} function returns the length of a string. 
 	}
@@ -52,8 +53,12 @@ To complete this week's exercises you will also need to download the {\tt SumFir
 
 \begin{Exercise}[title=While Loops]
 	
-	While-loops are used when the number of times the program needs to loop is not known beforehand. The {\tt while} loop checks a condition statement at beginning of each loop and will carry out the loop as long as this condition is true.
-	\Question{\label{Q:whilestring} Can you finish the {\tt while} loop by replacing the {\tt <?>} in the code below?
+	While-loops are used when the number of times the program needs to loop is not known beforehand. The {\tt while} loop checks a condition statement at the beginning of each loop and will carry out the loop as long as this condition is true.
+	\Question{\label{Q:whilestring} Can you finish the {\tt while} loop by replacing the {\tt <?>} in the code below?  
+	
+    \textbf{Note:} {\tt <?>} is used as a placeholder to represent something missing - this could be an operator, a variable name,function name, etc.  Multiple {\tt <?>} in the same question are not necessarily representing the same thing.
+    
+    \pagebreak
 	
 	\vspace{0.5em}
 	{\tt Words = "Hello World"}\\
@@ -69,7 +74,7 @@ To complete this week's exercises you will also need to download the {\tt SumFir
 	\Question{(*) How would you change the code to print all the occurrences of the letter?
 	
 	\textbf{Hint:} What type of loop would be best?}
-	\Question{Finding characters or substrings in a string is very useful and so Python has a built-in function {\tt str.find()}. Test for program is right by comparing with the {\tt str.find()} function for some different target letters and words.
+	\Question{Finding characters or substrings in a string is very useful and so Python has a built-in function {\tt str.find()}. Test yoor program is right by comparing with the {\tt str.find()} function for some different target letters and words.
 	
 	\textbf{Hint:} Remember the {\tt help()} function.}
 	\Question{Open and run the {\tt HowManySquares.py} program. Can you fix the code to use {\tt CamelCase} and the {\tt +=} operator?}
@@ -77,15 +82,36 @@ To complete this week's exercises you will also need to download the {\tt SumFir
 	\Question{(*) Using the {\tt break} keyword, can you rewrite Q\ref{Q:whilestring} using a {\tt for} loop, an {\tt if} clause and {\tt enumerate()}?}
 \end{Exercise}
 
+\begin{Exercise}[title=More Loops]
+
+	Use loops and conditionals to solve the following problems:
+	\Question{Write a program that assigns two variables, say {\tt A} and {\tt B}, to the throws of two random dice. Your program should keep reassigning dice throws to {\tt A} and {\tt B} until {\tt A == B}. Then, create another variable to count the number of times the program assigns A and B random values until both numbers are equal. When this happens, print out a success message and the number of assignments it took for {\tt A == B}.
+	
+	\textbf{Hint:} Recall you replicated dice throws for an exercise in Week 1.}
+    \Question{Implement the ``Number Guessing Game'', which works in the following way:
+    \begin{itemize}
+        \item Pick a random number between 1 and 100.
+        \item Ask the user to guess the number using the {\tt input()} function.
+        \item Tell the user if they are correct and stop the program. If they are incorrect, tell them whether their guess is too low or too high.
+        \item Repeat until the user has guessed correctly.
+        \item Congratulate the user on guessing the number and tell them how many guesses it took them.
+    \end{itemize}
+	What about when the user guesses a number out of range? Add a check to your program to instruct the user to enter a guess within the accepted range.}  
+\end{Exercise}
+
+\pagebreak
+
+\subsection*{\Large Part 2. Data structures}
+
 \begin{Exercise}[title=Lists]
-	\Question{Make two list containing the values {\tt [1,2]} and {\tt [3,4]}.}
+	\Question{Make two lists containing the values {\tt [1,2]} and {\tt [3,4]}.}
 	\Question{Change the value 1 to the value 5.}
 	\Question{Sort the lists.
 	
 	\textbf{Hint:} Have a look at {\tt help(list)}.}
 	\Question{Make a nested list that contains both lists.}
 	\Question{Use two loops to print out all the values in the nested list (2x2 matrix) one by one.}
-	\Question{Write a program that asks the user to input a list of 10 words (strings) and which then creates a list containing the length of each word. Print out each word and word length, like so:
+	\Question{Write a program that asks the user to input a list of 10 words (strings) and then creates a list containing the length of each word. Print out each word and word length, like so:
 	
 	\vspace{0.5em}
 	{\tt Word: Algorithm - Word length: 9}
@@ -132,22 +158,6 @@ To complete this week's exercises you will also need to download the {\tt SumFir
 	\Question{Check if {\tt "Harry"} is in the dictionary.}
 \end{Exercise}
 
-\begin{Exercise}[title=More Loops]
-
-	Use loops and conditionals to solve the following problems:
-	\Question{Write a program that assigns two variables, say {\tt A} and {\tt B}, to the throws of two random dice. Your program should keep reassigning dice throws to {\tt A} and {\tt B} until {\tt A == B}. Then, create another variable to count the number of times the program assigns A and B random values until both numbers are equal. When this happens, print out a success message and the number of assignments it took for {\tt A == B}.
-	
-	\textbf{Hint:} Recall you replicated dice throws in for an exercise in Week 1.}
-    \Question{Implement the ``Number Guessing Game'', which works in the following way:
-    \begin{itemize}
-        \item Pick a random number between 1 and 100.
-        \item Ask the user to guess the number using the {\tt input()} function.
-        \item Tell the user if they are correct and stop the program. If they are incorrect, tell them whether their guess is too low or too high.
-        \item Repeat until the user has guessed correctly.
-        \item Congratulate the user on guessing the number and tell them how many guesses it took them.
-    \end{itemize}
-	What about when the user guesses a number out of range? Add a check to your program to instruct the user to enter a guess within the accepted range.}  
-\end{Exercise}
 
 \begin{Exercise}[title=FizzBuzz Game (*)]
 
@@ -158,7 +168,7 @@ To complete this week's exercises you will also need to download the {\tt SumFir
 	``$1$, $2$, Fizz, $4$, Buzz, Fizz, $7$, $8$, Fizz, Buzz, $11$, Fizz, $13$, $14$, FizzBuzz, $...$''.
 	\vspace{0.5em}
 	
-	\Question{Create two variables {\tt Mult3} and {\tt Mult5}, setting the values of them to be the strings {\tt "Fizz"} and {\tt "Buzz"}, respectively.}
+	\Question{Create two variables {\tt Mult3} and {\tt Mult5}, setting their values to be the strings {\tt "Fizz"} and {\tt "Buzz"}, respectively.}
 	\Question{Create an additional variable {\tt Limit}, which will be the number we count up to.}
 	\Question{At the beginning of your program, after you have assigned {\tt Mult3} and {\tt Mult5} their values, you will need to ask the user to \textbf{input} a value for {\tt Limit}. This can be done using the {\tt input()} function, which waits for the user to input some \emph{string} when you run your program, before continuing.
 	

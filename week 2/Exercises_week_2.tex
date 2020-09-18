@@ -21,7 +21,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Exercises -- Week 2: New Title}
 \subsubsection*{EMAT10007 -- Introduction to Computer Programming}
-\subsection*{\Large Recap: Exercises -- Week 1. Introduction to Python}
+\section*{\Large Recap: Exercises -- Week 1. Introduction to Python}
 
 \begin{Exercise}[title=Variables] \label{Ex:Variables}
 	\Question{Variables can be assigned values and (may) change during the execution of your program. In many languages, to assign a value to a variable, we just use a single ``equals'' sign: {\tt =}. Try:
@@ -108,6 +108,8 @@
 	\Question{(*) You can also use the {\tt bool()} function to evaluate any value as either {\tt True} or {\tt False}. What numbers evaluate as {\tt True}? Do any evaluate as {\tt False}?}
 \end{Exercise}
 
+\subsection*{\Large Part 2:  Lists \& Strings}
+
 \begin{Exercise}[title=Strings] \label{Ex:Strings}
     \Question{Create two variables called ``A'' and ``B''.}
 	\Question{Assign {\tt A} to ``Hello'' and {\tt B} to ``world''. The quotation marks indicate that these are strings. You can check this with {\tt type(A)} and {\tt type(B)}.}
@@ -148,6 +150,8 @@
 
 
 \subsection*{\Large Exercises -- Week 2. More on Variables, Types and Conditionals}
+
+\subsection*{\Large Part 1. Variables \& Types}
 
 \setcounter{Exercise}{0}
 
@@ -258,7 +262,7 @@
     }
     \Question{Sometimes we might want to force a variable to be a particular type. This is called explicit type conversion, or type casting. We use the built-in functions {\tt int()}, {\tt float()}, {\tt complex()}, {\tt bool()} and {\tt str()}.
     
-    Try converting the variables in Q\ref{Q:isinstance} to each of the different number types and observe what happens. When do we loose information about the number?
+    Try converting the variables in Q\ref{Q:isinstance} to each of the different number types and observe what happens. When do we lose information about the number?
     }
     \Question{What happens when we combine different types? What types are the following:
     \begin{itemize}
@@ -276,6 +280,27 @@
     
     \textbf{Hint:} Remember the Python Documentation for built-in functions: \url{https://docs.python.org/3/library/functions.html}}
 \end{Exercise}
+
+\begin{Exercise}[title=Boolean Operators]
+    \Question{Boolean values are the two constants {\tt False} and {\tt True}. Recall that Python is case-sensitive and so these values must begin with a capital letter. What happens if not?
+    
+    Once again IDLE helps us recognise that {\tt \color{Dandelion} True} and {\tt \color{Dandelion} False} are special {\tt keywords} by colouring them yellow.}
+    \Question{Assign three variables $A=5$, $B=10$ and $C=0$. Find the results of the following:
+    \begin{itemize}
+        \item {\tt A < B < C}
+        \item {\tt (A <= B) and (A > C)}
+        \item {\tt (2*A) == B}
+        \item {\tt A and B and C}
+        \item {\tt (A != B) or C}
+        \item {\tt (A > 0) and (B > 0) or not (C == 0)}
+    \end{itemize}
+    
+    \textbf{Hint:} It can be helpful to work out the truth tables for more complicated expressions. Have a look here: \url{https://www.digitalocean.com/community/tutorials/understanding-boolean-logic-in-python-3}
+    }
+    \Question{(*) You might have noticed above that some operators are binary (e.g. {\tt and} and {\tt or}) and some are unary (e.g. {\tt not}). Another binary operator is  {\tt $\wedge$} the {\tt xor} operator. Can you figure out what this operator does?}
+\end{Exercise}
+
+\subsection*{\Large Part 2. Lists \& Strings}
 
 \begin{Exercise}[title=Further Strings]
     \Question{Python also supports type casting to strings using the {\tt str()} function. Turn the following into strings.
@@ -307,24 +332,7 @@
     \Question{(*) What does the string method {\tt join()} do? Try it out - does it work how you expected?}
 \end{Exercise}
 
-\begin{Exercise}[title=Boolean Operators]
-    \Question{Boolean values are the two constants {\tt False} and {\tt True}. Recall that Python is case-sensitive and so these values must begin with a capital letter. What happens if not?
-    
-    Once again IDLE helps us recognise that {\tt \color{Dandelion} True} and {\tt \color{Dandelion} False} are special {\tt keywords} by colouring them yellow.}
-    \Question{Assign three variables $A=5$, $B=10$ and $C=0$. Find the results of the following:
-    \begin{itemize}
-        \item {\tt A < B < C}
-        \item {\tt (A <= B) and (A > C)}
-        \item {\tt (2*A) == B}
-        \item {\tt A and B and C}
-        \item {\tt (A != B) or C}
-        \item {\tt (A > 0) and (B > 0) or not (C == 0)}
-    \end{itemize}
-    
-    \textbf{Hint:} It can be helpful to work out the truth tables for more complicated expressions. Have a look here: \url{https://www.digitalocean.com/community/tutorials/understanding-boolean-logic-in-python-3}
-    }
-    \Question{(*) You might have noticed above that some operators are binary (e.g. {\tt and} and {\tt or}) and some are unary (e.g. {\tt not}). Another binary operator is  {\tt $\wedge$} the {\tt xor} operator. Can you figure out what this operator does?}
-\end{Exercise}
+
 
 \begin{Exercise}[title=Making a .py file]
     \Question{So far we have only been using the IDLE interactive shell. This is fine for small examples or when using Python like a calculator but for larger programs we want to use a python file. 
@@ -337,10 +345,12 @@
         \item Now call {\tt NumberInFile}. You should see that it has already been defined.
     \end{itemize}
     }
-    \Question{When we write programs in files, instead of directly printing the values of variables in the interactive shell by typing the variable name, we need to use the {\tt print()} function to produce an output. Trying printing the string {\tt "Hello World"} from your new file.
+    \Question{When we write programs in files, instead of directly printing the values of variables in the interactive shell by typing the variable name, we need to use the {\tt print()} function to produce an output. Try printing the string {\tt "Hello World"} from your new file.
     
     \textbf{Hint:} Check the `Quick Introduction to Python IDLE' video on Blackboard under Additional Help/Installation Guides and How Tos.}
 \end{Exercise}
+
+\subsection*{\Large Part 3. Control flow}
 
 \begin{Exercise}[title=Conditionals]
     \Question{We can use Boolean operators to write conditional statements which control the flow of our program. In the interactive shell, type:
@@ -362,9 +372,9 @@
     
     Using conditional statements write a program which takes in the variables {\tt x} and {\tt y} and tests which circles the point $(x, y)$ is in. How can you make this as concise as possible? Are there any conditions you do not have to test?
     }
-    \begin{figure}[th]
+    \begin{figure}[!h]
         \centering
-        \includegraphics{circles.png}
+        \includegraphics[height=5cm]{circles.png}
         \caption{Overlapping circles $C_1$, $C_2$ and $C_3$.}
         \label{fig:circles}
     \end{figure}
@@ -377,12 +387,12 @@
 
 \subsection*{Checklist}
 \begin{itemize}
-    \item Meet your TA - they will be mentoring you throughout the course, and will be there to answer question and provide feedback along the way.
+    \item Meet your TA - they will be mentoring you throughout the course, and will be there to answer questions and provide feedback along the way.
 	\item Check that you understand the basics: variables, different types of variables (integers, floats, complex, Booleans, strings), the different built-in operators, and how these work with both numbers and strings.
 	\item Practice with using the IDLE shell as a useful calculator with access to some powerful abilities provided in ``modules''.
     \item Check you are familiar with variable naming styles and conventions.
     \item Know how to make and run a python file script.
-	\item Learnt about conditional statements, and how these are used to control the flow of the program.
+	\item Learn about conditional statements, and how these are used to control the flow of the program.
 \end{itemize}
 
 \subsection*{Additional resource}

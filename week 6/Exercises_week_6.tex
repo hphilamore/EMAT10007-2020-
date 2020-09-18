@@ -8,43 +8,53 @@
 \usepackage{graphicx}
 \usepackage{fullpage}
 \usepackage[normalem]{ulem}
+\usepackage{listings}
+\usepackage[lastexercise]{exercise}
 \begin{document}
+
+\setlength{\parindent}{0cm}
+
+\renewcommand{\ExerciseHeader}{\large\textbf{\ExerciseName~\ExerciseHeaderNB} - \textbf{\ExerciseTitle}\medskip}
+
+\renewcommand{\ExePartHeader}{\medskip\textbf{\ExePartName\ExePartHeaderNB\ExePartHeaderTitle\medskip}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Exercises -- Week 6: File I/O and program arguments}
-\subsection*{EMAT10007 -- Introduction to Computer Programming}
+\subsubsection*{EMAT10007 -- Introduction to Computer Programming}
 \subsection*{Exercises -- Week 6: File I/O and program arguments}
+
+\subsection*{Part 1. File I/O}
 
 File input and output (I/O) is an important part of any program, as it allows you to load data into your program and to export data from your program.
 
-\begin{enumerate}
-	\item {\bf File input and output.}\\
-	The goal of this exercise is to write a program that reads in a high-score list and then asks the user to enter a new score. Your program should add this score to the list and then reorganise the list such that the scores are in descending order. Then, your program should save the new high-score list to the same file.
-	\begin{enumerate}
-		\item Start by creating a program which reads a list of high-scores from a file called {\tt HighScoreList.txt}.
-		\item Print out the list of high-scores in the following format:\\
-		{\tt Name: Jim Score: 108}
-		\item Then ask the user to {\tt input} a new name and score (try to accept both arguments in one line).
-		\item Place the new user and their score in the high-score list, do one of the following two actions:
+\begin{Exercise}[title= File input and output]\\
+The goal of this exercise is to write a program that reads in a high-score list and then asks the user to enter a new score. Your program should add this score to the list and then reorganise the list such that the scores are in descending order. Then, your program should save the new high-score list to the same file.
+\Question {Start by creating a program which reads a list of high-scores from a file called {\tt HighScoreList.txt}.
+ Print out the list of high-scores in the following format:\\
+		{\tt Name: Jim Score: 108}}
+\Question{ Then ask the user to {\tt input} a new name and score (try to accept both arguments in one line).}
+\Question{ Place the new user and their score in the high-score list, do one of the following two actions:
 		\begin{enumerate}
 			\item If the new score is the lowest score in the high-score list, then simply \textbf{append} it to the {\tt HighScoreList.txt} file.
 			\item If the new score is not the lowest in the list, then sort the list of high-scores into descending order, so that it is once again correctly ordered. Then \textbf{overwrite} the old high-score list with the new high-score list.\\
 			That way, when you run your program multiple times, your program will always present you with the most up-to-date high-score list.
 		\end{enumerate}
-		\item If the user does not enter anything ({\tt input(...) == ""}) then exit the program.
-	\end{enumerate}
+	If the user does not enter anything ({\tt input(...) == ""}) then exit the program.}
+\end{Exercise}
 
-	\item {\bf Program parameters (a.k.a\ command-line arguments).}\\
-	Using the same
-	\begin{enumerate}
-		\item Modify the program above to accept program {\tt parameters} of the following format:\\
+\subsection*{Part 2. Command line}
+
+\begin{Exercise}[title=Program parameters (a.k.a\ command-line arguments)]\\
+Using the same
+\Question{ Modify the program above to accept program {\tt parameters} of the following format:\\
 		{\tt -a [\emph{length}]}\\
 		{\tt -d [\emph{length}]}\\
-		where {\tt -a} here is short for ``ascending'' and {\tt -d} for ``descending''.
-		\item You should then sort your list depending on \textbf{ascending} or \textbf{descending} order. The second arguments in the above examples are \textbf{optional}, and should be integer values which specify the \emph{maximum number of scores to keep in the list}.
-		\item If there are fewer scores than {\tt [\emph{length}]}, then you should do nothing.
-		\item Otherwise, you should remove scores from the bottom until your high-score list contains {\tt [\emph{length}]} high-scores.\\
+		where {\tt -a} here is short for ``ascending'' and {\tt -d} for ``descending''.}
+\Question{ You should then sort your list depending on \textbf{ascending} or \textbf{descending} order. The second arguments in the above examples are \textbf{optional}, and should be integer values which specify the \emph{maximum number of scores to keep in the list}.\\
+If there are fewer scores than {\tt [\emph{length}]}, then you should do nothing.
+Otherwise, you should remove scores from the bottom until your high-score list contains {\tt [\emph{length}]} high-scores.\\
 		\textbf{Note:} You should only accept sensible values of these arguments, e.g., {\tt [\emph{length}]} should not be negative, or 0.
-		\item Any other argument values should be ignored.
-	\end{enumerate}
-\end{enumerate}
+ Any other argument values should be ignored.}
+
+\end{Exercise}
+
 \end{document}

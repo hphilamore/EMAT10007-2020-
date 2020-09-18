@@ -32,10 +32,13 @@
 		\item Input the message to be encrypted/decrypted.
 		\item Specify the rotation used by the Caesar cipher.
 		\item Produce a list of statistics about the messages, such as letter frequency, average word length, etc.
+		\item Extract, manipulate and create a visual representation of information contained in the message 
 % 		\item To automate the identification of the rotation used by some encrypted message.
 	\end{itemize}
 	\item Your Python program should be accompanied by a short, 1-2 page report. This should discuss your implementation and any design choices. For example, why you chose to use a specific data structure or how you improved the reusability of your code. 
  	\item \textbf{The \textbf{deadline is 15:00 on Friday 15$^{\textbf{th}}$ November.}} You must upload your assignment including the program (.py) and report (.PDF) to \textbf{Blackboard}.
+	\item Use comments to show what your code does. 
+	\item Show which part of the assignment each section of your code answers by adding comments showing part and sub-section (e.g. Part 1.1). Note that the order that the answers to the questions appear in the code may be different to the order they appear in this document so it is important to indicate to the marker where you have attempted to answer each question. 
 	\item For this assignment it is required that you submit individual work. You may discuss the creative approaches to solve your assignment with each other, but you must work individually on all of the programming.
 	\textbf{\hl{We will be checking for plagiarism!}}
 \end{itemize}
@@ -81,7 +84,7 @@
 	\Question{When the {\tt cipher mode} chosen is {\tt encryption} then your program should encrypt the message by the provided shift by passing the {\tt message} and {\tt rotation value} to an {\tt encryption} function as arguments. The program should then print the encrypted message.}
 	\Question{When the {\tt cipher mode} chosen is {\tt decryption} your program should follow the same steps as above, except your program should call a {\tt decryption} function on each message. Note that decryption follows the same process as encryption, only the shift goes the opposite way.}
 	\Question{Numbers, punctuation and spaces should be unchanged.}
-	\Question{All messages (either encrypted or decrypted) should be printed as \textbf{UPPER CASE} only.}
+	\Question{All messages (either encrypted or decrypted) should be returned as \textbf{UPPER CASE} only.}
 \end{Exercise}
 
 \begin{Exercise}[title=Analysing messages]
@@ -89,12 +92,11 @@
 	\begin{itemize}
 		\item Total number of words;
 		\item Number of unique words;
+		\item (Up to) The ten most common words sorted by their frequency in the format e.g., {\tt the~:~4} (i.e., "the" has been found 4 times)
 		\item Minimum, maximum, and average word length;
 		\item Most common letter;
-		\item (Up to) The ten most common words and their frequency, e.g., {\tt the~:~4} (i.e., "the" has been found 4 times)
 	\end{itemize}}
-	\Question{After the whole message has been encrypted or decrypted by your program, the program should print out the above statistics.}
-	\Question{The statistics should be based on the whole message; you do not need to print them for each line of the message.}
+	\Question{After the whole message has been encrypted or decrypted by your program, the program should print out the above statistics. The statistics should be based on the whole message; you do not need to print them for each line of the message.
 \end{Exercise}
 
 \begin{Exercise}[title=Messages from a file]
@@ -106,7 +108,7 @@
 \end{Exercise}
 
 \begin{Exercise}[title=Automated decryption]
-	\Question{Modify your program so that if the user has give the {\tt cipher mode} as decryption, the user then has a choice between specifying a {\tt rotation value} or choosing to automatically decrypt the message.}
+	\Question{Modify your program so that the user has an additional option for {\tt cipher mode}, {\tt auto-decryption}, in addition to the existing modes {\tt decryption} and {\tt encryption}.}
 	\Question{If automated decryption is chosen, the program should read in a file of common English words (this is provided by us and can be downloaded from BlackBoard).}
 	\Question{The program should then attempt to automate the decryption process by implementing the following algorithm:
 	\begin{enumerate}[label=(\alph*)]
@@ -122,6 +124,15 @@
 \end{Exercise}
 
 
+\begin{Exercise}[title=Extracting Information]
+	\Question{Modify your program so the user now has an additional choice of importing a directory of files in addition to providing an input message and reading a message from a file.}
+	\Question{If the option to import directory is chosen, the program should read in directory, and decrypt/encrypt the contents of each file.}
+	\Question{Modify the auto-decryption function so that the input from the user to verify if the decryption was successful can be switched on/off using an input argument to the auto-decryption function}
+	\Question{Decrypt all files in the folder 'sample_data'}
+
+\end{Exercise}
+
+
 \begin{Exercise}[title=(* Optional) Enhancements]
 
 The following section outlines some ideas to extend your program for those students confident with programming and looking to achieve additional marks. \textbf{\underline{This section is strictly optional}}.
@@ -130,22 +141,13 @@ The following section outlines some ideas to extend your program for those stude
 	\item Try out every possible rotation value first and sort them according to number of words matched with the dictionary. This should help reduce how many times you need to ask the user if the rotation is correct.
 	\item Research and identify common patterns in the English language. Create a function which attempts to match these in the encrypted input message in order to identify the rotation \emph{without} using the common words dictionary.
 \end{itemize}}
-\Question{Add an alternative mode where the user can input {\tt random} instead of a {\tt rotation value}. This should then result in the encryption/decryption functionality described:
+\Question{You may try to improve on the automated encryption process the following ways:
+\begin{itemize}
+\item Add an alternative mode where the user can input {\tt random} instead of a {\tt rotation value}. The cipher will shift the text by a number of places equal to the random value generated.   
+\item For each word in the message, you should select a rotation value at random, and then apply the rotation to the word (Update the decryption to decrypt word by word).
+\end{itemize}}
 
-\textbf{Encryption:}
-\begin{enumerate}[label=(\alph*)]
-	\item For each word in the message, you should select a rotation value at random, and then apply the rotation to the word.
-	\item You should then append a random letter to the beginning of the encrypted word, and the letter {\tt rotation value} positions down the alphabet to the end of the word. Example program input and output might be:
-	
-	\vspace{0.5em}
-	{\tt Please enter a message: "Hello world"}\\
-	{\tt Output: AURYYBN EASVPHI}
-	\vspace{0.5em}
-	
-	You may be able to work out that the first word uses a rotation of $13$ (A $\rightarrow$ N) and the second word uses a rotation of $4$ (E $\rightarrow$ I).
-\end{enumerate}
 
-\textbf{Decryption:} Given that we now know the new encryption scheme, you should implement the decryption functionality for input encrypted using this new scheme.}\\
 
 
 
