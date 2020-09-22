@@ -1,0 +1,111 @@
+HomeTeam	AwayTeam	Goals Home Team	Goals Away Team	Winning Team
+Arsenal	Crystal Palace	2	1	H
+Leicester	Everton	2	2	D
+Man United	Swansea	1	2	A
+QPR	Hull	0	1	A
+Stoke	Aston Villa	0	1	A
+West Brom	Sunderland	2	2	D
+West Ham	Tottenham	0	1	A
+Liverpool	Southampton	2	1	H
+Newcastle	Man City	0	2	A
+Burnley	Chelsea	1	3	A
+Aston Villa	Newcastle	0	0	D
+Chelsea	Leicester	2	0	H
+Crystal Palace	West Ham	1	3	A
+Everton	Arsenal	2	2	D
+Southampton	West Brom	0	0	D
+Swansea	Burnley	1	0	H
+Hull	Stoke	1	1	D
+Sunderland	Man United	1	1	D
+Tottenham	QPR	4	0	H
+Man City	Liverpool	3	1	H
+Burnley	Man United	0	0	D
+Everton	Chelsea	3	6	A
+Man City	Stoke	0	1	A
+Newcastle	Crystal Palace	3	3	D
+QPR	Sunderland	1	0	H
+Swansea	West Brom	3	0	H
+West Ham	Southampton	1	3	A
+Aston Villa	Hull	2	1	H
+Leicester	Arsenal	1	1	D
+Tottenham	Liverpool	0	3	A
+Arsenal	Man City	2	2	D
+Chelsea	Swansea	4	2	H
+Crystal Palace	Burnley	0	0	D
+Liverpool	Aston Villa	0	1	A
+Southampton	Newcastle	4	0	H
+Stoke	Leicester	0	1	A
+Sunderland	Tottenham	2	2	D
+West Brom	Everton	0	2	A
+Man United	QPR	4	0	H
+Hull	West Ham	2	2	D
+Aston Villa	Arsenal	0	3	A
+Burnley	Sunderland	0	0	D
+Newcastle	Hull	2	2	D
+QPR	Stoke	2	2	D
+Swansea	Southampton	0	1	A
+West Ham	Liverpool	3	1	H
+Everton	Crystal Palace	2	3	A
+Leicester	Man United	5	3	H
+Man City	Chelsea	1	1	D
+Tottenham	West Brom	0	1	A
+Arsenal	Tottenham	1	1	D
+Chelsea	Aston Villa	3	0	H
+Crystal Palace	Leicester	2	0	H
+Hull	Man City	2	4	A
+Liverpool	Everton	1	1	D
+Man United	West Ham	2	1	H
+Southampton	QPR	2	1	H
+Sunderland	Swansea	0	0	D
+West Brom	Burnley	4	0	H
+Stoke	Newcastle	1	0	H
+Aston Villa	Man City	0	2	A
+Hull	Crystal Palace	2	0	H
+Leicester	Burnley	2	2	D
+Liverpool	West Brom	2	1	H
+Sunderland	Stoke	3	1	H
+Swansea	Newcastle	2	2	D
+Chelsea	Arsenal	2	0	H
+Man United	Everton	2	1	H
+Tottenham	Southampton	1	0	H
+West Ham	QPR	2	0	H
+Arsenal	Hull	2	2	D
+Burnley	West Ham	1	3	A
+Crystal Palace	Chelsea	1	2	A
+Everton	Aston Villa	3	0	H
+Man City	Tottenham	4	1	H
+Newcastle	Leicester	1	0	H
+Southampton	Sunderland	8	0	H
+QPR	Liverpool	2	3	A
+Stoke	Swansea	2	1	H
+West Brom	Man United	2	2	D
+Liverpool	Hull	0	0	D
+Southampton	Stoke	1	0	H
+Sunderland	Arsenal	0	2	A
+Swansea	Leicester	2	0	H
+West Brom	Crystal Palace	2	2	D
+West Ham	Man City	2	1	H
+Burnley	Everton	1	3	A
+Man United	Chelsea	1	1	D
+Tottenham	Newcastle	1	2	A
+QPR	Aston Villa	2	0	H
+Arsenal	Burnley	3	0	H
+Chelsea	QPR	2	1	H
+Everton	Swansea	0	0	D
+Hull	Southampton	0	1	A
+Leicester	West Brom	0	1	A
+Newcastle	Liverpool	1	0	H
+Stoke	West Ham	2	2	D
+Aston Villa	Tottenham	1	2	A
+Man City	Man United	1	0	H
+Crystal Palace	Sunderland	1	3	A
+Burnley	Hull	1	0	H
+Liverpool	Chelsea	1	2	A
+Man United	Crystal Palace	1	0	H
+QPR	Man City	2	2	D
+Southampton	Leicester	2	0	H
+West Ham	Aston Villa	0	0	D
+Sunderland	Everton	1	1	D
+Swansea	Arsenal	2	1	H
+Tottenham	Stoke	1	2	A
+West Brom	Newcastle	0	2	A
