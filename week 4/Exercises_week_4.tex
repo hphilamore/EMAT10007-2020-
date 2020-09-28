@@ -23,39 +23,26 @@
 \subsubsection*{EMAT10007 -- Introduction to Computer Programming}
 \subsection*{\Large Exercises -- Week 4. Functions}
 
-To complete this week's exercises you will also need to download the {\tt Birthday.py} file from Blackboard.
-
  \textbf{Reminder:} The exercise sheets use {\tt <?>} as a placeholder to represent something missing - this could be an operator, a variable name, function name, etc. Multiple {\tt <?>} in the same question are not necessarily representing the same thing.
 
 \subsection*{\Large Part 1. Functions in Python}
 
-\begin{Exercise}[title=Happy Birthday]
-    \Question{Open the {\tt Birthday.py} file and run it.}
-    \Question{Add the line
+\begin{Exercise}[title= 99 Bottles of beer]
+
+\Question{99 Bottles of Beer” is a traditional song in the United States and Canada. It is popular to sing on long trips, as it has a very repetitive format which is easy to memorise, and can take a long time to sing. The song’s simple lyrics are as follows:\\
+
+{\tt 99 bottles of beer on the wall, 99 bottles of beer.
+Take one down, pass it around, 98 bottles of beer on the wall.}\\
+
+The same verse is repeated, each time with one fewer bottle. The song is completed when the singer or singers reach zero.
+Your task here is to write a Python program capable of generating all the verses of the song. Define a function {\tt PrintVerse(NumberOfBottles)} to print all of the verses of the
+song up to and including {\tt NumberOfBottles}.}
+
+\Question{Write an alternate function that takes a number of total bottles e.g. {\tt FillVerses(Total)}, but instead of printing the verses, returns a list filled with each
+verse of the song. Use a list comprehension to fill the list, rather than for-loops. After calling the function, you should then be able to loop through the list and print the verses in the correct order.\\
+\textbf{Hint:} There are several ways in which to ensure that the verses are printed in order e.g. {\tt reversed(), sorted(...,reverse=...)}}
     
-    \vspace{1em}
-    {\tt def BirthdaySong():} 
-    \vspace{1em}
-    
-    to create a function.}
-    \Question{What happens when we run this now? Remember we need to call a function for it to run. Add a line which calls the function.}
-    \Question{How would you change the function so we now celebrate Lynn's birthday?}
-    \Question{Add the argument {\tt Name} to the function and rewrite the function so we can celebrate anyone's birthday. Call it to celebrate Dan's birthday.}
-    \Question{Note that we repeat the line
-    
-    \vspace{1em}
-    {\tt print("Happy Birthday to you!")} 
-    \vspace{1em}
-    
-    multiple times. One of the benefits of functions is that they reduce the amount of repeating code.
-    
-    Create a function called {\tt HappyBirthday} which prints the phrase {\tt "Happy Birthday to you!"}. 
-    }
-    \Question{Insert this new function {\tt HappyBirthday} into the original {\tt BirthdaySong} function.}
-    \Question{Now this has not really made a big difference to the repetitions in the code.
-    
-    Change the {\tt HappyBirthday} function to take a argument {\tt Repeats} with a default value of 1. It should then print the phrase the given number of times.}
-    \Question{Update the {\tt BirthdaySong} function with the improved {\tt HappyBirthday} function - eliminating as much repeated code as possible.}
+ 
 \end{Exercise}
 
 \begin{Exercise}[title=Powers]
