@@ -21,13 +21,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Exercises -- Week 2: New Title}
 \subsubsection*{EMAT10007 -- Introduction to Computer Programming}
-\section*{\Large Recap: Exercises -- Week 1. Introduction to Python}
+\section*{\Large Part 2:  Variables \& Types}
+
+[N.B. Questions marked with an asterisk (*) are optional and designed to be more challenging.]
 
 \begin{Exercise}[title=Variables] \label{Ex:Variables}
 	\Question{Variables can be assigned values and (may) change during the execution of your program. In many languages, to assign a value to a variable, we just use a single ``equals'' sign: {\tt =}. Try:
 	
-	\vspace{0.5em}
-		{\tt z = 10}
 		
 		\vspace{0.5em}
 		{\tt x = 10}
@@ -35,7 +35,7 @@
 		{\tt y = 5}
 		\vspace{0.5em}
 	
-	What is returned now when you call {\tt x} and {\tt y}?}
+	What is returned now when you {\tt print} {\tt x} and {\tt y}?}
 	\Question{What happens if you now assign {\tt x = 4}?}
 	\Question{Variable names should start with a letter, and may contain letters or numbers. Be aware that some {\tt keywords} are reserved by the Python language and cannot be used as variable names. Try the following:
 
@@ -56,10 +56,10 @@
 		\vspace{0.5em}
 		{\tt import keyword}
 		
-		{\tt keyword.kwlist}
+		{\tt print(keyword.kwlist)}
 		\vspace{0.5em}}
 		
-	\Question{(*) [N.B. Questions marked with an asterisk are optional and designed to be more difficult.]
+	\Question{(*) 
 	
 	We can also assign multiple variables on the same line.
 	
@@ -73,7 +73,7 @@
 
 \begin{Exercise}[title=Numbers and Operators]
 
-\ExeText{As discussed in the lectures IDLE can be used as a calculator. You can input operations, assign values to variables, and store the results of operations for use in additional calculations.}
+\ExeText{As discussed in the lectures Python can be used as a calculator. You can input operations, assign values to variables, and store the results of operations for use in additional calculations.}
 
 	\Question{Create two variables called ``A'' and ``B'', and assign a value of your choice to each of these variables.}
 	\Question{To calculate the addition of {\tt A} and {\tt B}, enter {\tt A+B}.}
@@ -138,18 +138,7 @@
 	\end{itemize}}
 \end{Exercise}
 
-\begin{Exercise}[title=Importing Modules] \label{Ex:Import_Modules}
 
-    In the lectures we imported the {\tt math} module to extend the range of mathematical functions available. There are many other useful modules we can use, in this exercise we will look at the {\tt random} module.
-    \Question{Do {\tt import random} and use {\tt dir(random)} to find out what has been added.}
-    \Question{Can you find a function that would replicate a 6-sided dice throw?
-    
-    \textbf{Hint:} Remember you can use {\tt help(random)} to get a description of all the functions.}
-    \Question{How would you change this for a 12-sided dice? And a 20-sided one?}
-    \Question{(*) Python has a lot of built-in modules - do {\tt help(`modules')} to see just how many. For now have a look at {\tt file}, {\tt statistics}, {\tt cmath} and {\tt re}. Find them in the Python 3 Documentation (\url{https://docs.python.org/3/library/}) and think about how they could be useful. Try some of them out - ask your TA for ideas and pointers to tutorials.
-    
-    \textbf{Hint:} To start with I recommend investigating regular expressions in the {\tt re} module with the tutorial here: \url{https://www.w3schools.com/python/python_regex.asp}}
-\end{Exercise}
 
 
 \subsection*{\Large Exercises -- Week 2. More on Variables, Types and Conditionals}
@@ -185,7 +174,7 @@
     
     \textbf{Hint:} Check the documentation here: \url{https://python-reference.readthedocs.io/en/latest/docs/operators/index.html#assignment-operators}
     }
-    \Question{(*) What is the answer to $8 \div 2(2 + 2)$? Calculate this in the IDLE shell. Is it what you expected? To learn more about this behaviour research the order and precedence of operators in Python.
+    \Question{(*) What is the answer to $8 \div 2(2 + 2)$? Calculate this using Python. Is it what you expected? To learn more about this behaviour research the order and precedence of operators in Python.
     }
 \end{Exercise}
 
@@ -236,8 +225,7 @@
     {\tt del len}
     \vspace{1em}
     
-    \textbf{Note: } IDLE helps us recognise these {\tt keywords} by colour coding them. Check your IDLE shell and you should see that {\tt \color{DarkOrchid} len} is in purple and {\tt \color{Dandelion} del} is in yellow. 
-    }
+    \textbf{Note: } Sypder helps us recognise these {\tt keywords} by colour coding them.}
     % \Question{(*) Python uses the format {\tt \char`_\char`_variable\char`_\char`_} to denote some very special variables and methods. One examples is {\tt \char`_\char`_name\char`_\char`_}. For now, type {\tt \char`_\char`_name\char`_\char`_} and see what it returns. Speak to your TA about what this means.}
     
 \end{Exercise}
@@ -277,7 +265,7 @@
     
     This is the result of implicit type conversion, where Python automatically converts one type into another. This requires no input from us and is designed to avoid the loss of information.
     
-    \textbf{Note:} This also occurs when you calculate $1 \div 2$. Although you are dividing two {\tt ints}, a {\tt float} is returned. Be warned that this implicit conversion only happens in Python 3. In Python 2 this would be become the {\tt int} $0$. 
+    \textbf{Note:} This also occurs when you calculate $1 \div 2$. Although you are dividing two {\tt ints}, a {\tt float} is returned. 
     }
     \Question{(*) Explore the conversion functions {\tt oct()}, {\tt hex()} and {\tt bin()}. Research for what purposes these might be used.
     
@@ -287,7 +275,7 @@
 \begin{Exercise}[title=Boolean Operators]
     \Question{Boolean values are the two constants {\tt False} and {\tt True}. Recall that Python is case-sensitive and so these values must begin with a capital letter. What happens if not?
     
-    Once again IDLE helps us recognise that {\tt \color{Dandelion} True} and {\tt \color{Dandelion} False} are special {\tt keywords} by colouring them yellow.}
+    Once again Spyder helps us recognise that {\tt \color{Dandelion} True} and {\tt \color{Dandelion} False} are special {\tt keywords} by highlighting them using a different colour.}
     \Question{Assign three variables $A=5$, $B=10$ and $C=0$. Find the results of the following:
     \begin{itemize}
         \item {\tt A < B < C}
@@ -338,19 +326,15 @@
 
 
 \begin{Exercise}[title=Making a .py file]
-    \Question{So far we have only been using the IDLE interactive shell. This is fine for small examples or when using Python like a calculator but for larger programs we want to use a python file. 
+    \Question{For larger programs you will want to save your work as a python file. 
     \begin{itemize}
         \item Create a new python file by clicking on ``File'' and then ``New File''.
         \item In your new file add the line {\tt NumberInFile=5}.
-        \item Now click ``Run'' and then ``Run Module''.
-        \item It will ask you to save your file. Name it and save it somewhere appropriate.
-        \item The shell will say that it has restarted. This means that it has cleared from memory any modules imported or variables assigned. (You can test this.)
-        \item Now call {\tt NumberInFile}. You should see that it has already been defined.
+        \item Now click ``File'' and then ``Save''.
+        \item You will be prompted to choose a file name and location. Name your file and save it somewhere appropriate.
+        \item Next time you open Spyder, you can access the file by clicking on ``File'' then ``Open'', and then navigating to where your file is stored.
     \end{itemize}
     }
-    \Question{When we write programs in files, instead of directly printing the values of variables in the interactive shell by typing the variable name, we need to use the {\tt print()} function to produce an output. Try printing the string {\tt "Hello World"} from your new file.
-    
-    \textbf{Hint:} Check the `Quick Introduction to Python IDLE' video on Blackboard under Additional Help/Installation Guides and How Tos.}
 \end{Exercise}
 
 \subsection*{\Large Part 3. Control flow}
@@ -388,19 +372,20 @@
     % \textbf{Hint:} Recall you replicated dice throws in Week 1 - Ex.\ref{Ex:Import_Modules}.}
 \end{Exercise}
 
+
+
 \subsection*{Checklist}
 \begin{itemize}
-    \item Meet your TA - they will be mentoring you throughout the course, and will be there to answer questions and provide feedback along the way.
+
 	\item Check that you understand the basics: variables, different types of variables (integers, floats, complex, Booleans, strings), the different built-in operators, and how these work with both numbers and strings.
-	\item Practice with using the IDLE shell as a useful calculator with access to some powerful abilities provided in ``modules''.
+	\item Practice with using Spyder as a useful calculator with access to some powerful abilities provided in ``modules''.
     \item Check you are familiar with variable naming styles and conventions.
-    \item Know how to make and run a python file script.
-	\item Learn about conditional statements, and how these are used to control the flow of the program.
+    \item Know how to save and open a python file script in Spyder.
+    \item Learn about conditional statements, and how these are used to control the flow of the program.
 \end{itemize}
 
 \subsection*{Additional resource}
 \begin{itemize}
-    \item Check the `Additional Resources' folder on Blackboard, where you will find video tutorials on how to download and install Python 3 and using IDLE. Keep an eye on this folder as it'll be regularly updated with tutorials and guides.
 	\item There are many online tutorials for Python 3, so if you're wondering what more you can do, please do search online or ask your TAs for pointers.
 \end{itemize}
 
