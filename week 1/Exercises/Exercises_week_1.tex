@@ -1,0 +1,161 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage[lastexercise]{exercise}
+
+\setlength{\parindent}{0cm}
+
+\renewcommand{\ExerciseHeader}{\large\textbf{\ExerciseName~\ExerciseHeaderNB} - \textbf{\ExerciseTitle}\medskip}
+
+\renewcommand{\ExePartHeader}{\medskip\textbf{\ExePartName\ExePartHeaderNB\ExePartHeaderTitle\medskip}}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Exercises -- Week 1: Introduction to Python}
+\subsubsection*{EMAT10007 -- Introduction to Computer Programming}
+\subsection*{\Large Exercises -- Week 1. Introduction to Python}
+
+\subsection*{Getting Started}
+
+\begin{itemize}
+    \item{Install Anaconda by following the instructions in Tutorial Video 1.2}
+    \item{Familiarise yourself with the basics of using Spyder (part of Anaconda) by watching Tutorial Video 1.3}
+    \item{The exercises on this sheet are designed to give you a very gentle introduction to writing Python code to prepare you for the course.}
+    \item{Complete the exercises using the Spyder IDE, save your work as a .py file. you should have the file ready to discuss with the TA and other group members at the tutorial on Friday}
+    \item{You can discuss any questions you have or any issues with installing Anaconda with a teaching assistant at the drop-in session on Wednesday or the group tutorial on Friday.}  
+    \item{Don't worry if there is something you don't understand. The exercises are to give you some practise, but we will go over most things again in the lectures.}
+\end{itemize}
+
+
+
+
+
+
+
+\begin{Exercise}[title=Variables]
+	\Question{Variables can be assigned values and (may) change during the execution of your program. To assign a value to a variable, we just use a single ``equals'' sign: {\tt =}. Try:
+		
+		\vspace{0.5em}
+		{\tt x = 10}
+		
+		{\tt y = 5}
+		\vspace{0.5em}
+	
+	What is returned now when you call {\tt x} and {\tt y}?}
+	\Question{What happens if you now assign {\tt x = 4}?}
+	\Question{Variable names should start with a letter, and may contain letters or numbers. Be aware that some {\tt keywords} are reserved by the Python language and cannot be used as variable names.Try the following:
+
+        \vspace{0.5em}
+		{\tt True = 1}
+		\vspace{0.5em}
+		
+		What happens here, and why? Now try:
+		
+		\vspace{0.5em}
+		{\tt true = 1}
+		\vspace{0.5em}
+		
+	\textbf{Note:} Python is case-sensitive, so be careful when naming and using your variables!
+	
+	For a full list of keywords reserved by Python, enter the following:
+		
+		\vspace{0.5em}
+		{\tt help("keywords")}
+		
+	\Question{(*) We can also assign multiple variables on the same line.
+	
+	    \vspace{0.5em}
+		{\tt x, y  = 5, 10}
+		\vspace{0.5em}
+	
+	How would you extend this to also assign 15 to the variable {\tt z}?
+	}
+\end{Exercise}
+
+\begin{Exercise}[title=Numbers and Operators]
+
+\ExeText{Python can be used as a calculator. You can input operations, assign values to variables, and store the results of operations for use in additional calculations.}
+
+	\Question{Create two variables called ``A'' and ``B'', and assign a value of your choice to each of these variables.}
+	\Question{To calculate the addition of {\tt A} and {\tt B}, enter {\tt A+B}.}
+	\Question{Now enter {\tt A*(A+B)}.}
+	\Question{What happens if you enter {\tt A*A+B} instead? Python follows the same ordering of mathematical operations as any other calculator.}
+	\Question{Set {\tt A = 10} and {\tt B = 3}. Now enter {\tt A/B} to calculate the division of A} and B. What happens if you enter {\tt A//B} instead?
+	\Question{Now try {\tt A\%B}.
+	
+	\textbf{Note:} {\tt \%} is the modulus operator, and calculates the remainder of a division.}
+	\Question{(*) Can you calculate the circumference of a circle with a 5cm radius? How about a 12.5cm radius?
+	
+	\textbf{Hint:} Recall in the lectures we used the {\tt math} module to gain extra functionality. It also gives us constant values such as {\tt math.e}.}
+\end{Exercise}
+
+
+\begin{Exercise}[title=Strings]
+When the value of a variable is a character or sequence of characters, we call it a string. 
+    \Question{Create two variables called ``A'' and ``B''.}
+	\Question{Assign {\tt A} to ``Hello'' and {\tt B} to ``world''. The quotation marks indicate that these are strings. You can check this with {\tt type(A)} and {\tt type(B)}.}
+	\Question{Join these variables together by \emph{adding} {\tt A} and {\tt B}: {\tt A + B}
+	\Question{What happens when you try {\tt A - B}? 
+	
+	\textbf{Note:} Not all operators are defined for all variable types. For example substraction does not apply to strings. }
+	\Question{Notice how the string is missing a space between ``Hello'' and ``world''. Combine {\tt A}} and {\tt B} with a new space `` '' in the middle, and assign this new string to a new variable {\tt C}.}
+	\Question{Print the length of this new string by entering {\tt len(C)}.}
+	\Question{{\tt len()} is a built-in function in Python which simply returns the \emph{length} of something. What types of variables does {\tt len()} work on? 
+	
+	\vspace{0.25em}
+	\textbf{Hint:} Look at the Python 3 Documentation: \url{https://docs.python.org/3/library/functions.html}.}
+	\Question{(*) You can also check if a certain phrase or character is present in a string by using the keywords {\tt in} or {\tt not in}, which return a boolean.
+	
+	Using the string {\tt C} from above, try:
+	\begin{itemize}
+	    \item {\tt "w" in C}
+	    \item {\tt "hello" in C}
+	    \item {\tt "Hello" in C}
+	    \item {\tt "world" not in C}
+	    \item {\tt A in C}
+	\end{itemize}}
+\end{Exercise}
+
+
+\begin{Exercise}[title=Booleans]
+ Booleans are variables with the value {\tt True} or {\tt False}. When we compare to variables, for example {\tt is A greater than B?}, written {\tt A < B}, the outcome will be {\tt True} if, for example {\tt A = 5} and {\tt B = 2} and the outcome will be {\tt False} if, for example {\tt A = 2} and {\tt B = 4}. 
+ 
+ 
+	\Question{Create two variables called ``A'' and ``B'', and assign some numeric values to each of them.}
+    \Question{Print the results of:
+		\begin{itemize}
+		    \item {\tt A < B}
+		    \item {\tt A > B}
+		    \item {\tt A == B} \emph{(Note: Two equals signs)}
+		\end{itemize}
+
+		You can also use {\tt<=} for $\leq$ and {\tt>=} for $\geq$ comparisons.}
+	\Question{What happens if you do use {\tt A=B} with only a single equals sign?}
+	\Question{What happens if you write {\tt not} in front of one of the lines above?}
+	\Question{You can also set {\tt A} and {\tt B} to be Boolean truth values themselves, such as:
+		{\tt A = True} and {\tt B = False}.
+		\item Now try some logical (Boolean) operations such as:
+		\begin{itemize}
+		    \item {\tt A and B}
+		    \item {\tt A or B}
+		    \item {\tt A and not B}
+		\end{itemize}}
+	\Question{(*) You can also use the {\tt bool()} function to evaluate any value as either {\tt True} or {\tt False}. What numbers evaluate as {\tt True}? Do any evaluate as {\tt False}?}
+\end{Exercise}
+
+
+
+\subsection*{Checklist}
+\begin{itemize}
+    \item Meet your TA on Friday - they will be mentoring you throughout the course, and will be there to answer question and provide feedback along the way.
+	\item Check that you understand the basics: variables, different types of variables (numbers (integers, floats), Booleans, strings), the different built-in operators, and how these work with both numbers and strings.
+	\item Practice using Spyder. 
+\end{itemize}
+
+
+\end{document}
