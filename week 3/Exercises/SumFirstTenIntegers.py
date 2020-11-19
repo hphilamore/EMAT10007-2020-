@@ -1,6 +1,6 @@
 # Program for summing the first n numbers,
 Sum = 0
-for i in range(11):
+for i in range(1,11,2):
 	# Sum up only even numbers by using the modulo operator.
 	# The "modulo" operator applied to two numbers returns the "modulus", or
 	# the remainder of a division. In this example, we know that a number is
