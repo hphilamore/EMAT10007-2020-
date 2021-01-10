@@ -77,7 +77,8 @@ Exercises this week will explore the use of Numpy, a python module designed for 
 	\Question{Use the numpy {\tt random} function to produce an array of random numbers from 1 to 20, named {\tt lotteryNumbers}.}
 	\Question{Check whether the arrays are equivalent, to see if the user won the jackpot. If they get all three numbers right, print out the following: \\
 	{\tt Congratulations! You guessed all 3 numbers and won the jackpot!}\\
-	\textbf{Hint:} You could sort the arrays and compare them using the {\tt ==} operator.}
+	%\textbf{Hint:} You could sort the arrays and compare them using the {\tt ==} operator.}
+	\textbf{Hint:} You could compare the arrays using the numpy {\tt array\_equal} function.}
     \Question{Numbers can currently be repeated both in {\tt guessedNumbers} and {\tt lotteryNumbers}. Implement additional checks on the user input to avoid this. Then, ensure the randomly generated numbers are non-repeated. \\
     \textbf{Hint:} For {\tt lotteryNumbers}, try modifying the following function to fit your needs:\\
     {\tt np.random.choice(range(20), 10, replace=False)}} 
