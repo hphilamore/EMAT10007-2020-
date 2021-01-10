@@ -342,7 +342,7 @@ if 'file_path' in globals():
             
             data = np.hstack((data, stiffness))
             
-            # PART 5.6 save as .pdf file 
+            # PART 5.4 save as .pdf file 
             with open ('beam_data.csv', 'w') as f:
                 head = ",".join(headings) + "\n" + ",".join(data_[1])
                 #np.savetxt('beam_data.csv', data, delimiter=',', header=",".join(headings))
