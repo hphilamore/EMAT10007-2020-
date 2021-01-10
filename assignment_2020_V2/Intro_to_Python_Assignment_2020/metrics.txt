@@ -1,0 +1,4 @@
+Number of words: 1 
+Number of unique words: 1 
+Minimum word length: 2 
+Maximum word length: 2 

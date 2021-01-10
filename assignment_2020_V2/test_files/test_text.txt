@@ -1,0 +1,41 @@
+Amos and I did not address accurate intuitions beyond the casual
+statement that judgment heuristics “are quite useful, but sometimes lead to
+severe and systematic errors.” We focused on biases, both because we
+found them interesting in their own right and because they provided
+evidence for the heuristics of judgment. We did not ask ourselves whether
+all intuitive judgments under uncertainty are produced by the heuristics we
+studied; it is now clear that they are not. In particular, the accurate intuitions
+of experts are better explained by the effects of prolonged practice than by
+heuristics. We can now draw a richer andigha riche more balanced
+picture, in which skill and heuristics are alternative sources of intuitive
+judgments and choices.
+The psychologist Gary Klein tells the story of a team of firefighters that
+entered a house in which the kitchen was on fire. Soon after they started
+hosing down the kitchen, the commander heard himself shout, “Let’s get
+out of here!” without realizing why. The floor collapsed almost immediately
+after the firefighters escaped. Only after the fact did the commander realize
+that the fire had been unusually quiet and that his ears had been unusually
+hot. Together, these impressions prompted what he called a “sixth sense
+of danger.” He had no idea what was wrong, but he knew something was
+wrong. It turned out that the heart of the fire had not been in the kitchen but
+in the basement beneath where the men had stood.
+We have all heard such stories of expert intuition: the chess master who
+walks past a street game and announces “White mates in three” without
+stopping, or the physician who makes a complex diagnosis after a single
+glance at a patient. Expert intuition strikes us as magical, but it is not.
+Indeed, each of us performs feats of intuitive expertise many times each
+day. Most of us are pitch-perfect in detecting anger in the first word of a
+telephone call, recognize as we enter a room that we were the subject of
+the conversation, and quickly react to subtle signs that the driver of the car
+in the next lane is dangerous. Our everyday intuitive abilities are no less
+marvelous than the striking insights of an experienced firefighter or
+physician—only more common.
+1 2 3 5 5 5 5 5 5 5 5 5 5 5 5 5
+The psychology of accurate intuition involves no magic. Perhaps the
+best short statement of it is by the great Herbert Simon, who studied chess
+masters and showed that after thousands of hours of practice they come to
+see the pieces on the board differently from the rest of us. You can feel
+Simon’s impatience with the mythologizing of expert intuition when he
+writes: “The situation has provided a cue; this cue has given the expert
+access to information stored in memory, and the information provides the
+answer. Intuition is nothing more and nothing less than recognition.”
