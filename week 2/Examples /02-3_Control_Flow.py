@@ -80,7 +80,15 @@ else:
     
 print(x)
 
+# ------------------------------------
 
+
+if x > 10:
+	print("x greater than 10")
+elif x < 10:
+	print("y less than 10")
+else: 
+	print("x equal to 10")
 
 
 

@@ -1,8 +1,0 @@
-One two three four five six seven
-Avoiding punctuation so that statistics are easier to verify
-just in case
-the students count hyphens and things as separate words when
-splitting based on spaces
-which
-is
-valid

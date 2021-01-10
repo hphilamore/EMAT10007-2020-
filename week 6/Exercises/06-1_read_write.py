@@ -41,18 +41,7 @@ file.close()
 
 # --------------------------------------------
 
-scores = {"Manesha " : 80,
-          "Hannah "  : 67,
-          "Sajid "   : 50
-          }
-
-
-file = open("scores.txt", "a")
-
-for k, v in scores.items():
-    file.write( k + str(v) + "\n" )
-    
-file.close()
+5r
 
 # --------------------------------------------
 
@@ -92,6 +81,17 @@ print("highest score player: " +
       )
 
 # --------------------------------------------
+
+file = open("scores.txt", "r")
+
+for line in file:  
+    i = line.split()
+    print(i)
+
+file.close()
+  
+# --------------------------------------------
+
 
 
 # AUTO CLOSE

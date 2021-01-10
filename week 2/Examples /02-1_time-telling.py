@@ -6,8 +6,8 @@ Created on Sat Sep  5 20:16:33 2020
 @author: hemma
 """
 
-
-time = 17.05  # current time 
+# current time
+time = 17.05   
 
 work_starts = 8.00
 work_ends = 17.00

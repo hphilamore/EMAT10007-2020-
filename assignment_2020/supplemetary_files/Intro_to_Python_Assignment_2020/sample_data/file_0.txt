@@ -1,6 +1,0 @@
-Name Berna Bobbie
-Customer number 5249371806
-Movie title Mulan
-Adult 5
-Child 2
-Concession 2

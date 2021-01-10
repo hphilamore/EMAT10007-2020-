@@ -1,3 +1,0 @@
-This is a list of Unicode characters; there are 143,859 characters, with Unicode 13.0, covering 154 modern and historical scripts, as well as multiple symbol sets. As it is not technically possible to list all of these characters in a single Wikipedia page, this list is limited to a subset of the most important characters for English-language readers, with links to other pages which list the supplementary characters. This page includes the 1062 characters in the Multilingual European Character Set 2 (MES-2) subset, and some additional related characters.
-
-characters.txt

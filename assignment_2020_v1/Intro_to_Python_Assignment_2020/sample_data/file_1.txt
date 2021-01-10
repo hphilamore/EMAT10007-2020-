@@ -1,0 +1,6 @@
+Name Courtnay Bernard
+Customer number 2810659374
+Movie title Tenet
+Adult 3
+Child 0
+Concession 3

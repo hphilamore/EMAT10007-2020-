@@ -1,0 +1,4 @@
+Number of words: 91 
+Number of unique words: 65 
+Minimum word length: 1 
+Maximum word length: 11 
